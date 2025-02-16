@@ -7,7 +7,7 @@ import { useSwipeable } from "react-swipeable";
 
 export const HeroCarousel = () => {
   const items = [
-    // Keep your existing items array
+    //   A visionary leader, philanthropist, and community trailblazer whose legacy continues to inspire.
     {
       id: 1,
       img: "/carousel/img_1.webp",
@@ -17,26 +17,26 @@ export const HeroCarousel = () => {
     {
       id: 2,
       img: "/carousel/img_2.webp",
-      text: "Forever in Our Memories",
+      text: "A visionary leader & philanthropist",
       altText: "Memorial flowers arrangement",
     },
     {
       id: 3,
       img: "/carousel/img_3.webp",
-      text: "New image in Our Memories",
+      text: "A trailblazer",
       altText: "Memorial flowers arrangement",
     },
     {
       id: 4,
       img: "/carousel/img_4.webp",
-      text: "New image in Our Memories",
+      text: "Your legacy will continue to inspire",
       altText: "Memorial flowers arrangement",
     },
 
     {
       id: 5,
       img: "/carousel/img_5.webp",
-      text: "New image in Our Memories",
+      text: "Rest In Peace, Daddy.",
       altText: "Memorial flowers arrangement",
     },
   ];

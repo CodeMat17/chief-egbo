@@ -15,6 +15,7 @@ import { ArrowLeft, ArrowRight, FileText } from "lucide-react";
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 import Subheadings from "./Subheadings";
+import {condolenceData} from '@/data'
 
 
 
@@ -26,47 +27,10 @@ export interface Tribute {
   type: "text" | "image";
 }
 
-const sampleTributes: Tribute[] = [
-  {
-    id: "1",
-    title: "Memories of Our Journey, from the word go till this moment",
-    from: "Ada Jie",
-    content:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum in dictum sem, at dignissim arcu.\n\n" +
-      "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.\n\n" +
-      "Suspendisse potenti. Donec nec laoreet ligula. Sed sed nisl at nunc faucibus dignissim.\n\n" +
-      "Curabitur ut felis ac quam convallis varius. Praesent feugiat, nisi at interdum imperdiet, justo ex consequat odio, at vestibulum felis sapien vel libero.",
-    type: "text",
-  },
-  {
-    id: "2",
-    title: "A Tribute in Image",
-    from: "Ozor",
-    content: "/sample.png", // This image is in the public folder.
-    type: "image",
-  },
-  {
-    id: "3",
-    title: "Another Beautiful Memory",
-    from: "malesuada",
-    content:
-      "Aliquam tincidunt, sapien a sollicitudin congue, lorem mi accumsan nulla, vitae blandit velit leo id nibh.\n\n" +
-      "Mauris dictum justo sit amet urna fermentum, sit amet hendrerit dui dictum.\n\n" +
-      "Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Sed sed nisl at nunc faucibus dignissim.\n\n" +
-      "Aliquam tincidunt, sapien a sollicitudin congue, lorem mi accumsan nulla, vitae blandit velit leo id nibh.",
-    type: "text",
-  },
-  {
-    id: "4",
-    title: "A Tribute in Image",
-    from: "Chinedu",
-    content: "/condo/condo_1.webp", // This image is in the public folder.
-    type: "image",
-  },
-];
+
 
 const CondolencePage: React.FC = () => {
-  const [tributes] = useState<Tribute[]>(sampleTributes);
+  const [condolences] = useState<Tribute[]>(condolenceData);
   const [selectedTribute, setSelectedTribute] = useState<Tribute | null>(null);
 
   // For horizontal scroll tracking
@@ -100,8 +64,6 @@ const CondolencePage: React.FC = () => {
   return (
     <div className='py-12 px-4 sm:px-6 lg:px-8'>
       <div className='max-w-7xl mx-auto relative'>
-        
-
         <Subheadings text='Condolence Messages' />
 
         {/* Horizontal scroll container for all screens */}
@@ -109,9 +71,9 @@ const CondolencePage: React.FC = () => {
           <div
             ref={scrollContainerRef}
             className='flex space-x-4 overflow-x-auto scrollbar-hide py-4'>
-            {tributes.map((tribute) => (
+            {condolences.map((condo) => (
               <motion.div
-                key={tribute.id}
+                key={condo.id}
                 variants={itemVariants}
                 initial='hidden'
                 animate='visible'
@@ -121,23 +83,23 @@ const CondolencePage: React.FC = () => {
                   <CardHeader>
                     <CardTitle className='flex items-center gap-2'>
                       <FileText className='text-gray-600 shrink-0' />
-                      {tribute.title}
+                      {condo.title}
                     </CardTitle>
                     <CardDescription>
-                      <p>- {tribute.from}</p>
+                      <p>- {condo.from}</p>
                     </CardDescription>
                   </CardHeader>
                   <CardContent className='flex-1'>
-                    {tribute.type === "text" ? (
+                    {condo.type === "text" ? (
                       // Truncated preview using Tailwind's line-clamp-5.
                       <div className='prose prose-sm overflow-hidden line-clamp-5'>
-                        {tribute.content}
+                        {condo.content}
                       </div>
                     ) : (
                       <div className='relative h-36 bg-gray-100 rounded-lg overflow-hidden'>
                         <Image
-                          src={tribute.content}
-                          alt={tribute.title}
+                          src={condo.content}
+                          alt={condo.title}
                           fill
                           className='object-cover'
                         />
@@ -147,9 +109,9 @@ const CondolencePage: React.FC = () => {
                   <CardFooter className='flex justify-end'>
                     <Button
                       variant='outline'
-                      onClick={() => setSelectedTribute(tribute)}
+                      onClick={() => setSelectedTribute(condo)}
                       className='text-sm rounded-xl'>
-                      View Tribute
+                      View
                     </Button>
                   </CardFooter>
                 </Card>
@@ -171,7 +133,7 @@ const CondolencePage: React.FC = () => {
           onOpenChange={(open) => !open && setSelectedTribute(null)}>
           <AnimatePresence>
             {selectedTribute && (
-              <DialogContent className='max-w-4xl min-h-screen rounded-xl p-6 shadow-2xl'>
+              <DialogContent className='max-w-6xl min-h-screen rounded-xl p-6 shadow-2xl'>
                 <motion.div
                   initial={{ opacity: 0, scale: 0.9 }}
                   animate={{ opacity: 1, scale: 1 }}
@@ -188,13 +150,20 @@ const CondolencePage: React.FC = () => {
                       ))}
                     </div>
                   ) : (
-                    <div className='relative w-full h-full'>
-                      <Image
-                        src={selectedTribute.content}
-                        alt={selectedTribute.title}
-                        fill
-                        className='object-contain'
-                      />
+                    <div className='relative w-full h-full overflow-auto scrollbar-hide'>
+                      <motion.div
+                        initial={{ scale: 0.95 }}
+                        animate={{ scale: 1 }}
+                        transition={{ duration: 0.5 }}
+                        className='w-full max-w-[800px] mx-auto'>
+                        <Image
+                          src={selectedTribute.content}
+                          alt={selectedTribute.title}
+                          width={1653}
+                          height={2339}
+                          className='object-contain'
+                        />
+                      </motion.div>
                     </div>
                   )}
                 </motion.div>

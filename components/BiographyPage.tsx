@@ -1,146 +1,117 @@
 "use client";
 
-import React from "react";
 import { motion } from "framer-motion";
-// import Image from "next/image";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
-// import { Button } from "@/components/ui/button";
+import Biafra from "./biography/Biafra";
+import Education from "./biography/Education";
+import Faith from "./biography/Faith";
+import Family from "./biography/Family";
+import Intro from "./biography/Intro";
+import Marital from "./biography/Marital";
+import Triumphs from "./biography/Triumphs";
+import Wife from "./biography/Wife";
 
 const BiographyPage: React.FC = () => {
   return (
-    <div className='min-h-screen bg-gray-50 dark:bg-[#020817] '>
+    <div className='min-h-screen bg-gray-50 dark:bg-[#020817]'>
       {/* Hero Section */}
       <header
-        className='relative py-20 bg-cover bg-center bg-gray-50'
+        className='relative py-20 bg-cover bg-center text-center bg-gray-50'
         style={{ backgroundImage: "url('/logo.webp')" }}>
         <div className='absolute inset-0 bg-black opacity-60'></div>
-        <div className='relative z-10 flex flex-col items-center justify-center h-full px-4 text-center text-white'>
-          <motion.h1
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1 }}
-            className='text-4xl font-bold mb-4'>
-            Biography of Late Chief Dennis Okeke Anih
-          </motion.h1>
-          <motion.p
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 1, delay: 0.5 }}
-            className='text-xl max-w-2xl'>
-            A visionary leader, philanthropist, and community trailblazer whose
-            legacy continues to inspire.
-          </motion.p>
-        </div>
+        <motion.h1
+          initial={{ opacity: 0, y: -20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 1 }}
+          className='text-4xl font-bold mb-4 text-amber-500 drop-shadow-lg'>
+          MEMOIRS OF CHIEF DENNIS ANIH
+        </motion.h1>
+        <motion.h2
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 1, delay: 0.3 }}
+          className='text-2xl font-semibold text-white drop-shadow-sm z-30'>
+          OZUO-OMEE 1 OF NOMEH UNATAEZE
+        </motion.h2>
       </header>
 
-      {/* Main Content */}
-      <main className='max-w-6xl mx-auto py-16 px-4 sm:px-6 lg:px-8'>
-        {/* Biography Sections */}
+      <div className='max-w-4xl mx-auto px-4 py-12'>
+        {/* Dedication */}
         <motion.section
+          className='mb-16'
           initial={{ opacity: 0, x: -50 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8 }}
-          className='mb-12'>
-          <h2 className='text-3xl font-bold mb-4'>
-            Early Life &amp; Education
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8, delay: 0.3 }}>
+          <h2 className='text-3xl font-bold mb-6 text-amber-500 dark:text-amber-600 border-b-2 border-amber-500 dark:border-amber-600 pb-2'>
+            DEDICATION
           </h2>
-          <p className='mb-6 leading-relaxed'>
-            Born in [Birth Year] in [Birth Place], Chief Dennis Okeke Anih
-            exhibited exceptional promise from an early age. Educated at
-            prestigious institutions, he excelled in academics while developing
-            a strong sense of community and leadership.
-          </p>
+          <div className='space-y-4'>
+            <p>
+              This is dedicated to my lovely wife, my children and all my
+              relations far and near.
+            </p>
+          </div>
         </motion.section>
 
+        {/* Introduction */}
+        <Intro />
+
+        {/* Education and Career */}
+        <Education />
+
+        {/* BIAFRA WAR AND THE CONSEQUENCES */}
+        <Biafra />
+
+        {/*  MY MARITAL JOURNEY */}
+        <Marital />
+
+        {/* BUILDING  A STRONG AND  ACCOMPLISHED FAMILY */}
+        <Family />
+
+        {/*  TRIUMPHS AND TRIALS*/}
+        <Triumphs />
+
+        {/* A JOURNEY OF FAITH: MY DEVOTION TO CATHOLICISM */}
+        <Faith />
+
+        {/* MY WIFE - A BEACON OF SUPPORT. */}
+        <Wife />
+
+        {/* Genealogy */}
         <motion.section
+          className='mb-16'
           initial={{ opacity: 0, x: -50 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8, delay: 0.3 }}
-          className='mb-12'>
-          <h2 className='text-3xl font-bold mb-4'>Community Leadership</h2>
-          <p className='mb-6 leading-relaxed'>
-            As a passionate community leader, Chief Dennis Okeke Anih
-            spearheaded initiatives in education, healthcare, and economic
-            development that transformed lives and uplifted entire communities.
-          </p>
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8, delay: 1.2 }}>
+          <h2 className='text-3xl font-bold mb-6 text-amber-500 dark:text-amber-600 border-b-2 border-amber-500 dark:border-amber-600 pb-2'>
+            GENEALOGY
+          </h2>
+          <div className='grid md:grid-cols-2 gap-8'>
+            <div>
+              <p>
+                Late Mr Egbonwaegbo was born alone. He married and gave birth to
+                Aniegbo who later became the father of Chief Denis Anih.
+                <br />
+                <br />
+                Chief Denis who is the only surviving person among his siblings,
+                had late Bartholomew and Victoria as brother and sister. <br />
+                <br />
+                His grandfather, late Mr Egbonwaegbo was known as an epitome of
+                wisdom, a capacity builder and a peacemaker.
+                <br />
+                <br />
+                His father, late Mr Aniegbo was a very rich and famous farmer.
+                It was through farming business that he was able to train the
+                first standard six graduate in entire Nomeh Unataeze in the
+                person of late Mr Cyril Egbo.
+              </p>
+            </div>
+          </div>
         </motion.section>
-
-        <motion.section
-          initial={{ opacity: 0, x: -50 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8, delay: 0.6 }}
-          className='mb-12'>
-          <h2 className='text-3xl font-bold mb-4'>Legacy &amp; Impact</h2>
-          <p className='mb-6 leading-relaxed'>
-            His unwavering commitment to social justice and community
-            empowerment left an indelible mark on the lives of many. Chief
-            Dennis Okeke Anih’s legacy continues to guide and inspire community
-            leaders across the region.
-          </p>
-        </motion.section>
-
-        {/* Timeline Cards */}
-        <motion.section
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1, delay: 0.9 }}
-          className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2'>
-          <Card className='border-gray-400 dark:border-gray-700'>
-            <CardHeader>
-              <CardTitle className='text-2xl font-bold'>1970 - 1980</CardTitle>
-              <CardDescription>Formative Years</CardDescription>
-            </CardHeader>
-            <CardContent>
-              <p>
-                The early years of Chief Dennis Okeke Anih, where his innate
-                leadership qualities began to shine.
-              </p>
-            </CardContent>
-          </Card>
-          <Card className='border-gray-400 dark:border-gray-700'>
-            <CardHeader>
-              <CardTitle className='text-2xl font-bold'>1980 - 1990</CardTitle>
-              <CardDescription>Rise to Prominence</CardDescription>
-            </CardHeader>
-            <CardContent>
-              <p>
-                A transformative period during which he emerged as a trusted
-                community figure and advocate for change.
-              </p>
-            </CardContent>
-          </Card>
-          <Card className='border-gray-400 dark:border-gray-700'>
-            <CardHeader>
-              <CardTitle className='text-2xl font-bold'>1990 - 2000</CardTitle>
-              <CardDescription>Community Transformation</CardDescription>
-            </CardHeader>
-            <CardContent>
-              <p>
-                His leadership led to groundbreaking projects that improved the
-                lives of many.
-              </p>
-            </CardContent>
-          </Card>
-          <Card className='border-gray-400 dark:border-gray-700'>
-            <CardHeader>
-              <CardTitle className='text-2xl font-bold'>2000 - 2010</CardTitle>
-              <CardDescription>Lasting Legacy</CardDescription>
-            </CardHeader>
-            <CardContent>
-              <p>
-                In his later years, he devoted himself to mentoring emerging
-                leaders and ensuring his vision lived on.
-              </p>
-            </CardContent>
-          </Card>
-        </motion.section>
-      </main>
+      </div>
     </div>
   );
 };
