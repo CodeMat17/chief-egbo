@@ -121,7 +121,7 @@ export const HeroCarousel = () => {
                         {item.text}
                       </h1>
                       <motion.div
-                        className=' h-px bg-black mx-auto'
+                        className=' h-px bg-amber-500 mx-auto'
                         initial={{ width: 0 }}
                         animate={{ width: "100%" }}
                         transition={{ delay: 0.8, duration: 1.2 }}
@@ -139,10 +139,10 @@ export const HeroCarousel = () => {
       <div className='absolute bottom-8 left-1/2 -translate-x-1/2 flex gap-4 items-center'>
         <button
           onClick={handlePrev}
-          className='p-3 rounded-full bg-white/10 hover:bg-white/20 backdrop-blur-sm transition-all duration-300 hover:scale-110'
+          className='p-3 rounded-full bg-amber-500/50 hover:bg-amber-500/20 backdrop-blur-sm  transition-all duration-300 hover:scale-110'
           aria-label='Previous slide'>
           <svg
-            className='w-6 h-6'
+            className='w-6 h-6 '
             fill='none'
             stroke='currentColor'
             viewBox='0 0 24 24'>
@@ -161,7 +161,7 @@ export const HeroCarousel = () => {
               key={index}
               className={`w-2.5 h-2.5 rounded-full transition-all duration-300 ${
                 index === activeIndex
-                  ? "bg-white scale-125"
+                  ? "bg-amber-500 scale-125"
                   : "bg-white/50 hover:bg-white/70"
               }`}
               onClick={() => setActiveIndex(index)}
@@ -172,7 +172,7 @@ export const HeroCarousel = () => {
 
         <button
           onClick={handleNext}
-          className='p-3 rounded-full bg-white/10 hover:bg-white/20 backdrop-blur-sm transition-all duration-300 hover:scale-110'
+          className='p-3 rounded-full bg-amber-500/50 hover:bg-amber-500/20 backdrop-blur-sm transition-all duration-300 hover:scale-110'
           aria-label='Next slide'>
           <svg
             className='w-6 h-6'
