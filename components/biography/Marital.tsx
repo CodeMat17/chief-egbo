@@ -1,10 +1,9 @@
-import { useState } from 'react'
-import {motion} from 'framer-motion'
-import { Button } from '../ui/button';
+import { motion } from "framer-motion";
+import { useState } from "react";
+import { Button } from "../ui/button";
 
 const Marital = () => {
-
-const [marital, setMarital] = useState(false)
+  const [marital, setMarital] = useState(false);
 
   return (
     <section>
@@ -14,7 +13,7 @@ const [marital, setMarital] = useState(false)
         whileInView={{ opacity: 1, x: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.8, delay: 1.2 }}>
-        <h2 className='text-3xl font-bold mb-6 text-amber-500 dark:text-amber-600 border-b-2 border-amber-500 dark:border-amber-600pb-2'>
+        <h2 className='text-3xl font-bold mb-6 text-amber-600 dark:text-amber-400  border-b-2 border-amber-600 dark:border-amber-400 pb-2'>
           MY MARITAL JOURNEY
         </h2>
         <div className='space-y-8'>
@@ -67,41 +66,42 @@ const [marital, setMarital] = useState(false)
               wonderful children, each a unique thread in the intricate fabric
               of our family legacy. They are:
             </p>
-                      {marital && <ul className='list-disc pl-6 my-4 uppercase'>
-                          <li>Amoge</li>
-                          <li>Chika</li>
-                          <li>Ngozi</li>
-                          <li>Chibuzo (late)</li>
-                          <li>Nneka</li>
-                          <li>Ijeoma</li>
-                          <li>Chief Onyekaozulu</li>
-                      </ul>
-                          
-                      }
-                      {marital && <p>
-                          As we navigated the ebb and flow of life together, our family
-                          became a testament to the enduring power of love, resilience, and
-                          shared commitment. Though we faced the sorrow of losing our dear
-                          Chibuzo, the strength of our familial bonds remained unwavering, a
-                          testament to the enduring spirit that unites us.
-                          <br />
-                          <br />
-                          In recounting this chapter of my life, I am filled with gratitude
-                          for the blessings and challenges that shaped our journey. The
-                          narrative of our marital union is a reflection of the love that
-                          transcends time, a love that has weathered storms and celebrated
-                          triumphs—a love that continues to be the guiding force in the rich
-                          tapestry of our shared existence. <br />
-                          <br />
-                          My marriage with my wife is 53 years old this year and it is a
-                          product of commitment, respect for each other, forbearance, love,
-                          etc.
-                      </p>
-                      }
+            {marital && (
+              <ul className='list-disc pl-6 my-4 uppercase'>
+                <li>Amoge</li>
+                <li>Chika</li>
+                <li>Ngozi</li>
+                <li>Chibuzo (late)</li>
+                <li>Nneka</li>
+                <li>Ijeoma</li>
+                <li>Chief Onyekaozulu</li>
+              </ul>
+            )}
+            {marital && (
+              <p>
+                As we navigated the ebb and flow of life together, our family
+                became a testament to the enduring power of love, resilience,
+                and shared commitment. Though we faced the sorrow of losing our
+                dear Chibuzo, the strength of our familial bonds remained
+                unwavering, a testament to the enduring spirit that unites us.
+                <br />
+                <br />
+                In recounting this chapter of my life, I am filled with
+                gratitude for the blessings and challenges that shaped our
+                journey. The narrative of our marital union is a reflection of
+                the love that transcends time, a love that has weathered storms
+                and celebrated triumphs—a love that continues to be the guiding
+                force in the rich tapestry of our shared existence. <br />
+                <br />
+                My marriage with my wife is 53 years old this year and it is a
+                product of commitment, respect for each other, forbearance,
+                love, etc.
+              </p>
+            )}
             <Button
               variant='outline'
               onClick={() => setMarital(!marital)}
-              className='text-amber-600 font-semibold rounded-xl mt-2'>
+              className='text-amber-600 dark:text-amber-400 font-semibold rounded-xl mt-2'>
               {!marital ? "Read More" : "Read Less"}
             </Button>
           </div>
@@ -109,6 +109,6 @@ const [marital, setMarital] = useState(false)
       </motion.section>
     </section>
   );
-}
+};
 
-export default Marital
+export default Marital;

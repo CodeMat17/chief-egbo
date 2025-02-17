@@ -7,8 +7,8 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 import { AlignLeftIcon } from "lucide-react";
-import { Button } from "./ui/button";
 import Link from "next/link";
+import { Button } from "./ui/button";
 
 interface NavSheetProps {
   links: { tag: string; href: string }[];
@@ -24,33 +24,32 @@ const NavSheet = ({
   onLinkClick,
 }: NavSheetProps) => {
   return (
-    <section className="lg:hidden">
-         <Sheet open={isOpen} onOpenChange={onOpenChange}>
-      <SheetTrigger>
-        <Button asChild size='icon' variant='ghost'>
-          <AlignLeftIcon className='text-white' />
-        </Button>
-      </SheetTrigger>
-      <SheetContent>
-        <div className='flex flex-col gap-4 mt-8'>
-          {links.map((link, i) => (
-            <Link
-              key={i}
-              href={link.href}
-              onClick={(e) => {
-                onLinkClick(e, link.href);
-                onOpenChange(false); // Close sheet after click
-              }}
-              scroll={false}
-              className='hover:text-amber-400 transition-colors px-4 py-2'>
-              {link.tag}
-            </Link>
-          ))}
-        </div>
-      </SheetContent>
-    </Sheet>
+    <section className='lg:hidden'>
+      <Sheet open={isOpen} onOpenChange={onOpenChange}>
+        <SheetTrigger>
+          <Button asChild size='icon' variant='ghost'>
+            <AlignLeftIcon className='text-amber-600 dark:text-amber-400' />
+          </Button>
+        </SheetTrigger>
+        <SheetContent>
+          <div className='flex flex-col gap-4 mt-8'>
+            {links.map((link, i) => (
+              <Link
+                key={i}
+                href={link.href}
+                onClick={(e) => {
+                  onLinkClick(e, link.href);
+                  onOpenChange(false); // Close sheet after click
+                }}
+                scroll={false}
+                className='hover:text-amber-400 transition-colors px-4 py-2'>
+                {link.tag}
+              </Link>
+            ))}
+          </div>
+        </SheetContent>
+      </Sheet>
     </section>
- 
   );
 };
 

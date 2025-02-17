@@ -1,5 +1,8 @@
 "use client";
 
+import { Cinzel_Decorative } from "next/font/google";
+
+
 import { motion } from "framer-motion";
 import Biafra from "./biography/Biafra";
 import Education from "./biography/Education";
@@ -9,6 +12,10 @@ import Intro from "./biography/Intro";
 import Marital from "./biography/Marital";
 import Triumphs from "./biography/Triumphs";
 import Wife from "./biography/Wife";
+
+
+
+const cinzel = Cinzel_Decorative({ subsets: ["latin"], weight: "700" });
 
 const BiographyPage: React.FC = () => {
   return (
@@ -23,7 +30,7 @@ const BiographyPage: React.FC = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 1 }}
-          className='text-4xl font-bold mb-4 text-amber-500 drop-shadow-lg'>
+          className={`text-3xl sm:text-4xl font-bold mb-4 text-amber-400 drop-shadow-lg ${cinzel.className}`}>
           MEMOIRS OF CHIEF DENNIS ANIH
         </motion.h1>
         <motion.h2
@@ -44,7 +51,7 @@ const BiographyPage: React.FC = () => {
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.3 }}>
-          <h2 className='text-3xl font-bold mb-6 text-amber-500 dark:text-amber-600 border-b-2 border-amber-500 dark:border-amber-600 pb-2'>
+          <h2 className='text-3xl font-bold mb-6 text-amber-600 dark:text-amber-400 border-b-2 border-amber-600 dark:border-amber-400 pb-2'>
             DEDICATION
           </h2>
           <div className='space-y-4'>
@@ -86,7 +93,7 @@ const BiographyPage: React.FC = () => {
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 1.2 }}>
-          <h2 className='text-3xl font-bold mb-6 text-amber-500 dark:text-amber-600 border-b-2 border-amber-500 dark:border-amber-600 pb-2'>
+          <h2 className='text-3xl font-bold mb-6 text-amber-600 dark:text-amber-400 border-b-2 border-amber-600 dark:border-amber-400 pb-2'>
             GENEALOGY
           </h2>
           <div className='space-y-8'>

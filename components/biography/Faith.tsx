@@ -15,7 +15,7 @@ const [faith, setFaith] = useState(false)
         whileInView={{ opacity: 1, x: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.8, delay: 1.2 }}>
-        <h2 className='text-3xl font-bold mb-6 text-amber-500 dark:text-amber-600 border-b-2 border-amber-500 dark:border-amber-600pb-2'>
+        <h2 className='text-3xl font-bold mb-6 text-amber-600 dark:text-amber-400 border-b-2 border-amber-600 dark:border-amber-400 pb-2'>
           A JOURNEY OF FAITH: MY DEVOTION TO CATHOLICISM
         </h2>
         <div className='space-y-8'>
@@ -106,7 +106,7 @@ const [faith, setFaith] = useState(false)
             <Button
               variant='outline'
               onClick={() => setFaith(!faith)}
-              className='text-amber-600 font-semibold rounded-xl mt-2'>
+              className='text-amber-600 dark:text-amber-400 font-semibold rounded-xl mt-2'>
               {!faith ? "Read More" : "Read Less"}
             </Button>
           </div>
