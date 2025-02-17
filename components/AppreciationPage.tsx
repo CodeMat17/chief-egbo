@@ -45,14 +45,14 @@ const AppreciationPage: React.FC = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
             className={`text-3xl sm:text-4xl text-amber-400 font-bold mb-4 ${cinzel.className}`}>
-            In Appreciation
+            Appreciation
           </motion.h1>
           <motion.p
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1, delay: 0.5 }}
             className='text-xl max-w-2xl'>
-            Honoring everyone who traveled far to join us and those who helped
+            We appreciate everyone who traveled far to join us and those who helped
             make this event a beautiful celebration of life.
           </motion.p>
           <p className="mt-4 text-gray-300">(ADD MORE TEXT)</p>
