@@ -69,6 +69,13 @@ export const tributeData: DataStructure[] = [
       "SIR & LADY I.C.IBE",
     type: "text",
   },
+   {
+    id: "7",
+    title: "TRIBUTE TO MY DAD AND FATHER IN-LAW",
+    from: "Mike Okafor (In-law)",
+    content: "A special Dad is hard to find, talk more of a special father in-law. \n\n I wish you could have stayed forever but death they say is inevitable.\n\n You will always remain in my heart. You have left a space what no one will ever replace, not forgetting our talks and your kind advice.\n\n With tears I wave you goodbye.\n\n Adieu my great daddy\n Adieu Nwokeoma\n Adieu man with a beautiful heart",
+    type: "text",
+  },
 ];
 
 export const condolenceData: DataStructure[] = [
