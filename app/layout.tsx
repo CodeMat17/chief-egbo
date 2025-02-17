@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     title: "In Loving Memory of Chief Dennis – A Memorial Tribute",
     description:
       "A heartfelt memorial website honoring the life and legacy of Chief Dennis. Explore biographies, tributes, condolence messages, and more as we celebrate a remarkable life.",
-    url: "https://www.chief-egbo.com.ng",
+    url: "https://chief-egbo.com.ng",
     type: "website",
     images: [
       {

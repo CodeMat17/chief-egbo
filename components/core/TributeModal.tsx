@@ -81,7 +81,7 @@ export const TributeModal = ({
             </Button>
 
             {/* Content container */}
-            <div className='max-h-[90vh] overflow-y-auto scrollbar-hide p-6 my-6'>
+            <div className='max-h-[80vh] overflow-y-auto scrollbar-hide p-6 my-6'>
               {/* Image section */}
               <div className='relative h-32 w-32 aspect-square mb-3 rounded-full overflow-hidden'>
                 <Image
