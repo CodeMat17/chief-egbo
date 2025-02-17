@@ -45,7 +45,7 @@ const childrenTributes: Tribute[] = [
   },
   {
     id: 4,
-    name: "ANIH CHIMEREZE",
+    name: "Anih Chimereze",
     position: "Grand Son",
     image: "/user.avif",
     tribute:
@@ -53,7 +53,7 @@ const childrenTributes: Tribute[] = [
   },
   {
     id: 5,
-    name: "ANIH CHIBUZO",
+    name: "Anih Chibuzor",
     position: "GRAND SON",
     image: "/user.avif",
     tribute:
