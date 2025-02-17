@@ -18,7 +18,7 @@ const [faith, setFaith] = useState(false)
         <h2 className='text-3xl font-bold mb-6 text-amber-500 dark:text-amber-600 border-b-2 border-amber-500 dark:border-amber-600pb-2'>
           A JOURNEY OF FAITH: MY DEVOTION TO CATHOLICISM
         </h2>
-        <div className='grid md:grid-cols-2 gap-8'>
+        <div className='space-y-8'>
           <div>
             <p
               className={`transition-all duration-300 ${

@@ -61,9 +61,9 @@ const TributePage: React.FC = () => {
   };
 
   return (
-    <div className='py-12 px-4 sm:px-6 lg:px-8'>
+    <div id='other-tributes' className='py-12 px-4 sm:px-6 lg:px-8 scroll-mt-20'>
       <div className='max-w-7xl mx-auto relative'>
-        <Subheadings text='Tributes' />
+        <Subheadings text='Other Tributes' />
 
         {/* Horizontal scroll container for all screens */}
         <div className='relative'>
@@ -91,12 +91,12 @@ const TributePage: React.FC = () => {
                   <CardContent className='flex-1'>
                     {tribute.type === "text" ? (
                       // Truncated preview using Tailwind's line-clamp-5.
-                      <div className='prose prose-sm overflow-hidden line-clamp-5'>
+                      <div className='prose prose-sm overflow-hidden scrollbar-hide line-clamp-5'>
                         {tribute.content}
                       </div>
                     ) : (
                       // Display an image thumbnail.
-                      <div className='relative h-36 bg-gray-100 rounded-lg overflow-hidden'>
+                      <div className='relative h-36 bg-gray-100 rounded-lg overflow-hidden scrollbar-hide'>
                         <Image
                           src={tribute.content}
                           alt={tribute.title}
@@ -133,7 +133,7 @@ const TributePage: React.FC = () => {
           onOpenChange={(open) => !open && setSelectedTribute(null)}>
           <AnimatePresence>
             {selectedTribute && (
-              <DialogContent className='max-w-4xl min-h-screen rounded-xl p-6 shadow-2xl'>
+              <DialogContent className='max-w-6xl min-h-screen rounded-xl p-6 shadow-2xl'>
                 <motion.div
                   initial={{ opacity: 0, scale: 0.9 }}
                   animate={{ opacity: 1, scale: 1 }}
@@ -142,7 +142,7 @@ const TributePage: React.FC = () => {
                   <p className='text-xl font-medium'>{selectedTribute.title}</p>
                   <p className='mt-2 italic'>- {selectedTribute.from}</p>
                   {selectedTribute.type === "text" ? (
-                    <div className='p-6 h-full overflow-y-auto prose prose-base max-w-none'>
+                    <div className='p-6 h-full overflow-y-auto scrollbar-hide prose prose-base max-w-none'>
                       {selectedTribute.content.split("\n").map((para, idx) => (
                         <p key={idx} className='mb-4'>
                           {para}
@@ -150,13 +150,20 @@ const TributePage: React.FC = () => {
                       ))}
                     </div>
                   ) : (
-                    <div className='relative w-full h-full'>
-                      <Image
-                        src={selectedTribute.content}
-                        alt={selectedTribute.title}
-                        fill
-                        className='object-contain'
-                      />
+                    <div className='relative w-full h-full overflow-auto scrollbar-hide'>
+                      <motion.div
+                        initial={{ scale: 0.95 }}
+                        animate={{ scale: 1 }}
+                        transition={{ duration: 0.5 }}
+                        className='w-full max-w-[800px] mx-auto'>
+                        <Image
+                          src={selectedTribute.content}
+                          alt={selectedTribute.title}
+                          width={1653}
+                          height={2339}
+                          className='object-contain'
+                        />
+                      </motion.div>
                     </div>
                   )}
                 </motion.div>

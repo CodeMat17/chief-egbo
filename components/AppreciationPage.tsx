@@ -29,7 +29,7 @@ const appreciationMessages = [
 
 const AppreciationPage: React.FC = () => {
   return (
-    <div className='min-h-screen'>
+    <div id='appreciation' className='min-h-screen scroll-mt-20'>
       {/* Hero Section */}
       <header
         className='relative h-96 bg-cover bg-center'
@@ -84,8 +84,6 @@ const AppreciationPage: React.FC = () => {
             ))}
           </div>
         </motion.section>
-
-       
       </main>
     </div>
   );

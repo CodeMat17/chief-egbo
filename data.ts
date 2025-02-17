@@ -4,47 +4,72 @@ export type DataStructure = {
   content: string;
   from: string;
   type: "text" | "image";
-}
+};
 
 export const tributeData: DataStructure[] = [
   {
     id: "1",
-    title: "Memories of Our Journey, from the word go till this moment",
-    from: "Ada Jie",
-    content:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum in dictum sem, at dignissim arcu.\n\n" +
-      "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.\n\n" +
-      "Suspendisse potenti. Donec nec laoreet ligula. Sed sed nisl at nunc faucibus dignissim.\n\n" +
-      "Curabitur ut felis ac quam convallis varius. Praesent feugiat, nisi at interdum imperdiet, justo ex consequat odio, at vestibulum felis sapien vel libero.",
-    type: "text",
+    title: "Tribute / Condolence Message",
+    from: "Umuegbonu Umunna",
+    content: "/tributes/umuegbonu.webp",
+    type: "image",
   },
   {
     id: "2",
-    title: "A Tribute in Image",
-    from: "Ozor",
-    content: "/sample.png", // This image is in the public folder.
+    title:
+      "A Tribute to late Chief Dennis Anih (Egbo Nwafor Ogo), Ozuo-omee 1 na Nomeh Unateze",
+    from: "Sir (Okibe) Godwin O. Egbo (KSM)",
+    content: "/tributes/g_o_egbo.webp",
     type: "image",
   },
   {
     id: "3",
-    title: "Another Beautiful Memory",
-    from: "malesuada",
+    title: "Tribute",
+    from: "Jude Anih",
     content:
-      "Aliquam tincidunt, sapien a sollicitudin congue, lorem mi accumsan nulla, vitae blandit velit leo id nibh.\n\n" +
-      "Mauris dictum justo sit amet urna fermentum, sit amet hendrerit dui dictum.\n\n" +
-      "Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Sed sed nisl at nunc faucibus dignissim.\n\n" +
-      "Aliquam tincidunt, sapien a sollicitudin congue, lorem mi accumsan nulla, vitae blandit velit leo id nibh.",
+      "AT DAWN WE REMEMBER THE SOOTHING EMBRANCE OF YOUR UNPARALLED AFFECTION. THEY ARE LIKE TENDER DROPS OF DEW AT THE RISE OF THE SUN, WE ARE REKINDLES IN THE WEALTH OF YOUR LEGACY: YOUR HONESTY, HARDWORK, DILIGENCE, CONFIDENCE AND THE PURSUIT OF KNOWLEDGE......\n\n" +
+      "OZUOMEH......\n\n" +
+      "YOUR SEEDS HAVE BLOSSOMED FOR YOU SOWED IN LOVE AND WITH STRENGTH. WE WILL TELL IT ON THE MOUNTAIN FOR OURS IS INDEED A CHERISHED HERITAGE AND WE ARE PROUD OF IT, FOR THE LORD HAS BLESSED AND CONTINUES, EVER SO ABUNDANTLY, TO BLESS US.\n\n" +
+      "THANK YOU LORD",
     type: "text",
   },
   {
     id: "4",
-    title: "A Tribute in Image",
-    from: "Chinedu",
-    content: "/condo/condo_1.webp",
+    title:
+      "Tribute to Late Chief Dennis Okeke Anih (Ozuome 1 Na Nomeh Unateze)",
+    from: "Chukwuemeka Jr, CEO 0% xtraliquor/ G2 multi  Int'l",
+    content:
+      '"A Great Tree Has Fallen"\n\n' +
+      "It is with profound sadness that I mourn the passing of a visionary leader, a pillar of strength, and a shining star in our community. Late Chief Dennis Okeke Anih, Ozuome 1 Na Nomeh Unateze, who left an indelible mark on the lives of everyone he touched.\n\n" +
+      "Born on May 12, 1935, Chief Anih lived a life of purpose, dedication, and service to humanity. His remarkable journey was characterized by an unwavering commitment to the well-being of his people, his community, and the world at large.\n\n" +
+      "As a respected leader, Chief Anih's wisdom, guidance, and selflessness inspired countless individuals. His generosity, kindness, and compassion earned him the admiration and gratitude of all who knew him.\n\n" +
+      "Chief Anih's legacy extends far beyond his impressive accomplishments. His impact on the lives of those around him will be felt for generations to come. His memory will continue to inspire us to strive for greatness, to uplift one another, and to make a positive difference in the world.\n\n" +
+      "As we bid farewell to this extraordinary individual, we take comfort in the knowledge that his spirit will live on through us. We will cherish the memories of his love, his laughter, and his unwavering dedication to our community.\n\n" +
+      "Rest in peace, dear Chief Anih. Your life was a blessing to us all, and your memory will be a guiding light in the days ahead.\n\n" +
+      "May your legacy continue to inspire us to be better versions of ourselves.\n\n" +
+      "Farewell, Ozuome 1 Na Nomeh Unateze. You will be deeply missed.\n\n" +
+      "Chukwuemeka Jr, CEO 0% xtraliquor/ G2 multi  Int'l",
+    type: "text",
+  },
+  {
+    id: "5",
+    title: "Tribute to Chief Dennis Okeke Anih, (Ozuo-omee 1 na Nomeh Unateze)",
+    from: "Ozo Dr. (Sir) Chigbo Chukwu",
+    content: "/tributes/chigbo.webp",
     type: "image",
   },
+  {
+    id: "6",
+    title: "TRIBUTE TO EZIGBO OGO",
+    from: "SIR & LADY I.C.IBE",
+    content:
+      "Farewell, our dear in-law, Chief Dennis Okeke Anih. Ozuome 1 na Nomeh Unateze. We will miss you dearly. You were a remarkable man—kind, devoted, and always present for your family. Your warmth, generosity, and unwavering wisdom touched countless lives. Your presence at family gatherings brought joy, unity, and guidance, always offering honest and heartfelt advice. Though you are no longer with us, your love and cherished memories will forever remain in our hearts.\n\n" +
+      "May your caring soul rest in perfect peace. Amen." +
+      "It is well until we meet again at the glorious gates on the day of resurrection Ezigbo Ogom.\n\n" +
+      "SIR & LADY I.C.IBE",
+    type: "text",
+  },
 ];
-
 
 export const condolenceData: DataStructure[] = [
   {
@@ -98,15 +123,30 @@ export const condolenceData: DataStructure[] = [
   },
   {
     id: "8",
+    title: "Condolence Message",
+    from: "Chukwuemeka Onyesoh, OBA AGBALANZE na NRI.",
+    content:
+      "Ozo Akobundu Ndigbo.\n\n\n" +
+      "My dear fellow Ozo,\n\n" +
+      "Please accept my sincerest sympathies on the loss of your father - Chief Dennis Okeke Anih, Ozuome 1 na Nomeh Unateze.\n\n" +
+      "From your deep expression of his loss, he must have been a wonderful person who brought joy and laughter to all those who knew him. My thoughts and prayers are with you and your family during this difficult time. Surely you will always cherish his memories." +
+      "May your happy memories of him soon outweigh the sadness you're feeling.\n\n" +
+      " Please take solace in his living it out to 89. It is no mean feat with Nigeria's average life expectancy of 53.\n\n" +
+      "Please celebrate his memories.\n\n" +
+      "Chukwuemeka Onyesoh, OBA AGBALANZE na NRI.",
+    type: "text",
+  },
+  {
+    id: "9",
     title: "Condolences",
     from: "Stanbic IBTC",
     content: "/condo/condo_8.jpg",
     type: "image",
   },
   {
-    id: "9",
+    id: "10",
     title: "Condolence Message",
-    from: "Senior Staff Asso. Nigerian Universities",
+    from: "Senior Staff Asso. of Nigerian Universities",
     content: "/condo/condo_9.webp",
     type: "image",
   },

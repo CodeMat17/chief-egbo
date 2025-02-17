@@ -12,7 +12,7 @@ import Wife from "./biography/Wife";
 
 const BiographyPage: React.FC = () => {
   return (
-    <div className='min-h-screen bg-gray-50 dark:bg-[#020817]'>
+    <div id='biography' className='min-h-screen bg-gray-50 dark:bg-[#020817] scroll-mt-20'>
       {/* Hero Section */}
       <header
         className='relative py-20 bg-cover bg-center text-center bg-gray-50'
@@ -89,7 +89,7 @@ const BiographyPage: React.FC = () => {
           <h2 className='text-3xl font-bold mb-6 text-amber-500 dark:text-amber-600 border-b-2 border-amber-500 dark:border-amber-600 pb-2'>
             GENEALOGY
           </h2>
-          <div className='grid md:grid-cols-2 gap-8'>
+          <div className='space-y-8'>
             <div>
               <p>
                 Late Mr Egbonwaegbo was born alone. He married and gave birth to

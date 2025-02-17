@@ -1,32 +1,56 @@
 import {
   Sheet,
   SheetContent,
-  SheetDescription,
-  SheetHeader,
-  SheetTitle,
+  // SheetDescription,
+  // SheetHeader,
+  // SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
 import { AlignLeftIcon } from "lucide-react";
 import { Button } from "./ui/button";
+import Link from "next/link";
 
-const NavSheet = () => {
+interface NavSheetProps {
+  links: { tag: string; href: string }[];
+  isOpen: boolean;
+  onOpenChange: (open: boolean) => void;
+  onLinkClick: (e: React.MouseEvent<HTMLAnchorElement>, hash: string) => void;
+}
+
+const NavSheet = ({
+  links,
+  isOpen,
+  onOpenChange,
+  onLinkClick,
+}: NavSheetProps) => {
   return (
-    <Sheet>
+    <section className="lg:hidden">
+         <Sheet open={isOpen} onOpenChange={onOpenChange}>
       <SheetTrigger>
         <Button asChild size='icon' variant='ghost'>
-          <AlignLeftIcon className="text-white" />
+          <AlignLeftIcon className='text-white' />
         </Button>
       </SheetTrigger>
       <SheetContent>
-        <SheetHeader>
-          <SheetTitle>Are you absolutely sure?</SheetTitle>
-          <SheetDescription>
-            This action cannot be undone. This will permanently delete your
-            account and remove your data from our servers.
-          </SheetDescription>
-        </SheetHeader>
+        <div className='flex flex-col gap-4 mt-8'>
+          {links.map((link, i) => (
+            <Link
+              key={i}
+              href={link.href}
+              onClick={(e) => {
+                onLinkClick(e, link.href);
+                onOpenChange(false); // Close sheet after click
+              }}
+              scroll={false}
+              className='hover:text-amber-400 transition-colors px-4 py-2'>
+              {link.tag}
+            </Link>
+          ))}
+        </div>
       </SheetContent>
     </Sheet>
+    </section>
+ 
   );
 };
 
