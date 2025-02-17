@@ -9,9 +9,8 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { Dialog, DialogContent } from "@/components/ui/dialog";
 import { AnimatePresence, motion } from "framer-motion";
-import { ArrowLeft, ArrowRight, FileText } from "lucide-react";
+import { ArrowLeft, ArrowRight, FileText, X } from "lucide-react";
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 import Subheadings from "./Subheadings";
@@ -28,6 +27,18 @@ export interface Tribute {
 const CondolencePage: React.FC = () => {
   const [condolences] = useState<Tribute[]>(condolenceData);
   const [selectedTribute, setSelectedTribute] = useState<Tribute | null>(null);
+
+  // Disable background scroll when modal is open.
+  useEffect(() => {
+    if (selectedTribute) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [selectedTribute]);
 
   // For horizontal scroll tracking.
   const scrollContainerRef = useRef<HTMLDivElement>(null);
@@ -58,11 +69,13 @@ const CondolencePage: React.FC = () => {
   };
 
   return (
-    <div className='py-12 px-4 sm:px-6 lg:px-8'>
+    <div
+      id='other-tributes'
+      className='py-12 px-4 sm:px-6 lg:px-8 scroll-mt-20'>
       <div className='max-w-7xl mx-auto relative'>
         <Subheadings text='Condolence Messages' />
 
-        {/* Horizontal scroll container for all screens */}
+        {/* Horizontal scroll container */}
         <div className='relative'>
           <div
             ref={scrollContainerRef}
@@ -106,7 +119,7 @@ const CondolencePage: React.FC = () => {
                       variant='outline'
                       onClick={() => setSelectedTribute(condo)}
                       className='text-sm rounded-xl'>
-                      View
+                      View Tribute
                     </Button>
                   </CardFooter>
                 </Card>
@@ -122,51 +135,75 @@ const CondolencePage: React.FC = () => {
           </motion.div>
         </div>
 
-        {/* Modal dialog for full preview */}
-        <Dialog
-          open={!!selectedTribute}
-          onOpenChange={(open) => !open && setSelectedTribute(null)}>
-          <AnimatePresence>
-            {selectedTribute && (
-              <DialogContent className='max-w-6xl h-[90vh] rounded-xl p-6 shadow-2xl overflow-hidden'>
-                <motion.div
-                  initial={{ opacity: 0, scale: 0.9 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  exit={{ opacity: 0, scale: 0.9 }}
-                  className='relative h-[80vh]'>
-                  <p className='text-xl font-medium'>{selectedTribute.title}</p>
-                  <p className='mt-2 italic'>- {selectedTribute.from}</p>
-                  {selectedTribute.type === "text" ? (
-                    <div className='p-6 mb-6 h-full overflow-y-auto scrollbar-hide prose prose-base max-w-none'>
-                      {selectedTribute.content.split("\n").map((para, idx) => (
-                        <p key={idx} className='mb-4'>
-                          {para}
+        {/* Modal dialog for full preview using AnimatePresence */}
+        <AnimatePresence>
+          {selectedTribute && (
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              className='fixed inset-0 z-50 bg-black/50 backdrop-blur-sm'
+              onClick={() => setSelectedTribute(null)}>
+               <div className='absolute inset-0 flex items-center justify-center p-4'>
+
+         
+              <motion.div
+                initial={{ y: 50, opacity: 0 }}
+                animate={{ y: 0, opacity: 1 }}
+                exit={{ y: 50, opacity: 0 }}
+                transition={{ type: "spring", bounce: 0.2 }}
+                className='absolute inset-0 flex items-center justify-center p-4'
+                onClick={(e) => e.stopPropagation()}>
+                <div className='bg-background rounded-xl shadow-2xl w-full max-w-3xl max-h-[90dvh] flex flex-col'>
+                  {/* Close Button */}
+                  <button
+                    onClick={() => setSelectedTribute(null)}
+                    className='sticky top-0 z-10 ml-auto p-4 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-full m-2 transition-colors'
+                    aria-label='Close'>
+                    <X className='h-6 w-6 text-red-500' />
+                  </button>
+
+                  {/* Content Area */}
+                  <div className='overflow-y-auto flex-1 px-4 pb-6 mx-4 scrollbar-thin scrollbar-track-transparent scrollbar-thumb-amber-500/50 scrollbar-hide'>
+                    {selectedTribute.type === "text" ? (
+                      <div className='prose prose-base max-w-none'>
+                        <h2 className='text-2xl font-semibold mb-2'>
+                          {selectedTribute.title}
+                        </h2>
+                        <p className='text-gray-600 dark:text-gray-400 mb-4 italic'>
+                          From - {selectedTribute.from}
                         </p>
-                      ))}
-                    </div>
-                  ) : (
-                    // For image tributes (such as letters), display the image responsively.
-                    <div className='relative w-full h-full overflow-auto scrollbar-hide'>
+                        {selectedTribute.content
+                          .split("\n")
+                          .map((para, idx) => (
+                            <p key={idx} className='mb-4'>
+                              {para}
+                            </p>
+                          ))}
+                      </div>
+                    ) : (
                       <motion.div
                         initial={{ scale: 0.95 }}
                         animate={{ scale: 1 }}
                         transition={{ duration: 0.5 }}
-                        className='w-full mx-auto max-w-[800px]'>
+                        className='relative w-full overflow-auto scrollbar-hide'>
                         <Image
                           src={selectedTribute.content}
                           alt={selectedTribute.title}
-                          width={1200}
+                          width={1653}
                           height={2339}
-                          className=' object-contain'
+                          className='w-full h-auto object-contain'
+                          sizes='(max-width: 768px) 100vw, 800px'
                         />
                       </motion.div>
-                    </div>
-                  )}
+                    )}
+                  </div>
+                </div>
                 </motion.div>
-              </DialogContent>
-            )}
-          </AnimatePresence>
-        </Dialog>
+                </div>
+            </motion.div>
+          )}
+        </AnimatePresence>
       </div>
     </div>
   );

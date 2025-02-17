@@ -1,35 +1,39 @@
 "use client";
 
-import { motion } from "framer-motion";
-import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
+import { Cinzel_Decorative } from "next/font/google";
 
-const appreciationMessages = [
-  {
-    id: 1,
-    title: "Grateful for Distant Guests",
-    message:
-      "We are deeply thankful to all those who traveled from far and wide to join us in remembering our beloved Chief. Your journey, sacrifice, and presence enriched the memorial and united our hearts in solidarity.",
-    image: "/appreciation-distant.jpg",
-  },
-  {
-    id: 2,
-    title: "Honoring Our Helpers",
-    message:
-      "Our sincere gratitude goes out to everyone who contributed their time, effort, and resources to ensure that the burial service was a success. Your selfless assistance in every detail made a difficult day a little easier.",
-    image: "/appreciation-helpers.jpg",
-  },
-  {
-    id: 3,
-    title: "A Community United",
-    message:
-      "In our hour of loss, the community came together like never before. The compassion, warmth, and unity you all displayed remind us that even in sorrow, there is hope and togetherness.",
-    image: "/appreciation-community.jpg",
-  },
-];
+import { motion } from "framer-motion";
+// import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
+
+const cinzel = Cinzel_Decorative({ subsets: ["latin"], weight: "700" });
+
+// const appreciationMessages = [
+//   {
+//     id: 1,
+//     title: "Grateful for Distant Guests",
+//     message:
+//       "We are deeply thankful to all those who traveled from far and wide to join us in remembering our beloved Chief. Your journey, sacrifice, and presence enriched the memorial and united our hearts in solidarity.",
+//     image: "/appreciation-distant.jpg",
+//   },
+//   {
+//     id: 2,
+//     title: "Honoring Our Helpers",
+//     message:
+//       "Our sincere gratitude goes out to everyone who contributed their time, effort, and resources to ensure that the burial service was a success. Your selfless assistance in every detail made a difficult day a little easier.",
+//     image: "/appreciation-helpers.jpg",
+//   },
+//   {
+//     id: 3,
+//     title: "A Community United",
+//     message:
+//       "In our hour of loss, the community came together like never before. The compassion, warmth, and unity you all displayed remind us that even in sorrow, there is hope and togetherness.",
+//     image: "/appreciation-community.jpg",
+//   },
+// ];
 
 const AppreciationPage: React.FC = () => {
   return (
-    <div id='appreciation' className='min-h-screen scroll-mt-20'>
+    <div id='appreciation' className=' scroll-mt-20'>
       {/* Hero Section */}
       <header
         className='relative h-96 bg-cover bg-center'
@@ -40,7 +44,7 @@ const AppreciationPage: React.FC = () => {
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
-            className='text-3xl sm:text-4xl text-amber-400 font-bold mb-4'>
+            className={`text-3xl sm:text-4xl text-amber-400 font-bold mb-4 ${cinzel.className}`}>
             In Appreciation
           </motion.h1>
           <motion.p
@@ -51,11 +55,12 @@ const AppreciationPage: React.FC = () => {
             Honoring everyone who traveled far to join us and those who helped
             make this event a beautiful celebration of life.
           </motion.p>
+          <p className="mt-4 text-gray-300">(ADD MORE TEXT)</p>
         </div>
       </header>
 
       {/* Appreciation Cards */}
-      <main className='max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8'>
+      {/* <main className='max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8'>
         <motion.section
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -84,7 +89,7 @@ const AppreciationPage: React.FC = () => {
             ))}
           </div>
         </motion.section>
-      </main>
+      </main> */}
     </div>
   );
 };
