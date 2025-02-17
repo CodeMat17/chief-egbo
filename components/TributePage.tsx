@@ -227,7 +227,7 @@ const TributePage: React.FC = () => {
                   </button>
 
                   {/* Content Area */}
-                  <div className='overflow-y-auto flex-1 px-4 pb-6 mx-4 scrollbar-thin scrollbar-track-transparent scrollbar-thumb-amber-500/50 scrollbar-hide'>
+                  <div className='relative overflow-y-auto flex-1 pb-6 mx-4 scrollbar-thin scrollbar-track-transparent scrollbar-thumb-amber-500/50 scrollbar-hide'>
                     {selectedTribute.type === "text" ? (
                       <div className='prose prose-base max-w-none'>
                         <h2 className='text-2xl font-semibold mb-2'>
@@ -247,18 +247,22 @@ const TributePage: React.FC = () => {
                           ))}
                       </div>
                     ) : (
-                      <motion.div
-                        initial={{ scale: 0.95 }}
-                        animate={{ scale: 1 }}
-                        className='relative w-full aspect-[3/4] bg-gray-100 dark:bg-gray-900 rounded-xl overflow-hidden'>
-                        <Image
-                          src={selectedTribute.content}
-                          alt={selectedTribute.title}
-                          fill
-                          className='object-contain'
-                          sizes='(max-width: 768px) 100vw, 800px'
-                        />
-                      </motion.div>
+                      <div>
+                      
+                        <p className="italic mb-3">From - {selectedTribute.from}</p>
+                        <motion.div
+                          initial={{ scale: 0.95 }}
+                          animate={{ scale: 1 }}
+                          className='relative w-full aspect-[3/4] bg-gray-100 dark:bg-gray-900 rounded-xl overflow-hidden'>
+                          <Image
+                            src={selectedTribute.content}
+                            alt={selectedTribute.title}
+                            fill
+                            className='object-contain'
+                            sizes='(max-width: 768px) 100vw, 800px'
+                          />
+                        </motion.div>
+                      </div>
                     )}
                   </div>
                 </div>

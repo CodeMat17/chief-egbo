@@ -144,63 +144,66 @@ const CondolencePage: React.FC = () => {
               exit={{ opacity: 0 }}
               className='fixed inset-0 z-50 bg-black/50 backdrop-blur-sm'
               onClick={() => setSelectedTribute(null)}>
-               <div className='absolute inset-0 flex items-center justify-center p-4'>
+              <div className='absolute inset-0 flex items-center justify-center p-4'>
+                <motion.div
+                  initial={{ y: 50, opacity: 0 }}
+                  animate={{ y: 0, opacity: 1 }}
+                  exit={{ y: 50, opacity: 0 }}
+                  transition={{ type: "spring", bounce: 0.2 }}
+                  className='absolute inset-0 flex items-center justify-center p-4'
+                  onClick={(e) => e.stopPropagation()}>
+                  <div className='bg-background rounded-xl shadow-2xl w-full max-w-3xl max-h-[90dvh] flex flex-col'>
+                    {/* Close Button */}
+                    <button
+                      onClick={() => setSelectedTribute(null)}
+                      className='sticky top-0 z-10 ml-auto p-4 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-full m-2 transition-colors'
+                      aria-label='Close'>
+                      <X className='h-6 w-6 text-red-500' />
+                    </button>
 
-         
-              <motion.div
-                initial={{ y: 50, opacity: 0 }}
-                animate={{ y: 0, opacity: 1 }}
-                exit={{ y: 50, opacity: 0 }}
-                transition={{ type: "spring", bounce: 0.2 }}
-                className='absolute inset-0 flex items-center justify-center p-4'
-                onClick={(e) => e.stopPropagation()}>
-                <div className='bg-background rounded-xl shadow-2xl w-full max-w-3xl max-h-[90dvh] flex flex-col'>
-                  {/* Close Button */}
-                  <button
-                    onClick={() => setSelectedTribute(null)}
-                    className='sticky top-0 z-10 ml-auto p-4 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-full m-2 transition-colors'
-                    aria-label='Close'>
-                    <X className='h-6 w-6 text-red-500' />
-                  </button>
-
-                  {/* Content Area */}
-                  <div className='overflow-y-auto flex-1 px-4 pb-6 mx-4 scrollbar-thin scrollbar-track-transparent scrollbar-thumb-amber-500/50 scrollbar-hide'>
-                    {selectedTribute.type === "text" ? (
-                      <div className='prose prose-base max-w-none'>
-                        <h2 className='text-2xl font-semibold mb-2'>
-                          {selectedTribute.title}
-                        </h2>
-                        <p className='text-gray-600 dark:text-gray-400 mb-4 italic'>
-                          From - {selectedTribute.from}
-                        </p>
-                        {selectedTribute.content
-                          .split("\n")
-                          .map((para, idx) => (
-                            <p key={idx} className='mb-4'>
-                              {para}
-                            </p>
-                          ))}
-                      </div>
-                    ) : (
-                      <motion.div
-                        initial={{ scale: 0.95 }}
-                        animate={{ scale: 1 }}
-                        transition={{ duration: 0.5 }}
-                        className='relative w-full overflow-auto scrollbar-hide'>
-                        <Image
-                          src={selectedTribute.content}
-                          alt={selectedTribute.title}
-                          width={1653}
-                          height={2339}
-                          className='w-full h-auto object-contain'
-                          sizes='(max-width: 768px) 100vw, 800px'
-                        />
-                      </motion.div>
-                    )}
+                    {/* Content Area */}
+                    <div className='overflow-y-auto flex-1 pb-6 mx-4 scrollbar-thin scrollbar-track-transparent scrollbar-thumb-amber-500/50 scrollbar-hide'>
+                      {selectedTribute.type === "text" ? (
+                        <div className='prose prose-base max-w-none'>
+                          <h2 className='text-2xl font-semibold mb-2'>
+                            {selectedTribute.title}
+                          </h2>
+                          <p className='text-gray-600 dark:text-gray-400 mb-4 italic'>
+                            From - {selectedTribute.from}
+                          </p>
+                          {selectedTribute.content
+                            .split("\n")
+                            .map((para, idx) => (
+                              <p key={idx} className='mb-4'>
+                                {para}
+                              </p>
+                            ))}
+                        </div>
+                      ) : (
+                        <>
+                          <p className='italic mb-3'>
+                            From - {selectedTribute.from}
+                          </p>
+                          <motion.div
+                            initial={{ scale: 0.95 }}
+                            animate={{ scale: 1 }}
+                            transition={{ duration: 0.5 }}
+                            className='relative w-full overflow-auto scrollbar-hide'>
+                            <Image
+                              src={selectedTribute.content}
+                              alt={selectedTribute.title}
+                              width={1653}
+                              height={2339}
+                              className='w-full h-auto object-contain'
+                              sizes='(max-width: 768px) 100vw, 800px'
+                            />
+                          </motion.div>
+                        </>
+                      )}
+                    </div>
                   </div>
-                </div>
                 </motion.div>
-                </div>
+              </div>
             </motion.div>
           )}
         </AnimatePresence>
