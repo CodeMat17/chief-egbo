@@ -1,25 +1,25 @@
 "use client";
 
-import { motion, AnimatePresence } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import Image from "next/image";
-import { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useSwipeable } from "react-swipeable";
 
 export const HeroCarousel = () => {
   const items = [
-    //   A visionary leader, philanthropist, and community trailblazer whose legacy continues to inspire.
     {
       id: 1,
-      img: "/carousel/img_1.webp",
-      text: "Forever in Our Hearts",
-      altText: "Memorial flowers arrangement",
-    },
-    {
-      id: 2,
       img: "/carousel/img_2.webp",
       text: "A visionary leader & philanthropist",
       altText: "Memorial flowers arrangement",
     },
+    {
+      id: 2,
+      img: "/carousel/img_1.webp",
+      text: "Forever in Our Hearts",
+      altText: "Memorial flowers arrangement",
+    },
+
     {
       id: 3,
       img: "/carousel/img_3.webp",
@@ -73,7 +73,8 @@ export const HeroCarousel = () => {
   if (!mounted) return null;
 
   return (
-    <section id='home'
+    <section
+      id='home'
       {...handlers}
       className='relative h-[85vh] md:h-[90vh] w-full overflow-hidden bg-white scroll-mt-20'
       aria-label='Hero Carousel'>
@@ -99,7 +100,7 @@ export const HeroCarousel = () => {
                       src={item.img}
                       alt={item.altText}
                       fill
-                      loading="lazy"
+                      loading='lazy'
                       quality={100}
                       className='object-cover md:object-contain object-center'
                       sizes='(max-width: 768px) 100vw, (max-width: 1024px) 100vw, 100vw'
