@@ -69,16 +69,15 @@ const Nav = () => {
   return (
     <nav className='fixed top-0 z-50 w-full p-4 bg-gradient-to-b from-black/90 backdrop-blur-[0.5px]'>
       <div className='w-full max-w-7xl mx-auto flex items-center justify-between'>
-        <div className='text-blue-500 bg-amber-300 p-0.5 rounded-full'>
           <Image
             alt='logo'
             priority
             src='/logo.webp'
             width={70}
             height={70}
-            className='aspect-square object-cover'
+            className='aspect-square object-cover rounded-full border-4 border-amber-400'
           />
-        </div>
+   
         <div className='flex items-center gap-6'>
           <ThemeToggle />
           <NavSheet

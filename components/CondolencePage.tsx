@@ -119,7 +119,7 @@ const CondolencePage: React.FC = () => {
                       variant='outline'
                       onClick={() => setSelectedTribute(condo)}
                       className='text-sm rounded-xl'>
-                      View Tribute
+                      View
                     </Button>
                   </CardFooter>
                 </Card>

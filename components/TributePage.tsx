@@ -108,7 +108,7 @@ const TributePage: React.FC = () => {
                       {tribute.title}
                     </CardTitle>
                     <CardDescription>
-                      <p>- {tribute.from}</p>
+                      <p className="italic text-amber-700 dark:text-amber-400 font-semibold text-sm">From - {tribute.from}</p>
                     </CardDescription>
                   </CardHeader>
                   <CardContent className='flex-1'>
@@ -134,7 +134,7 @@ const TributePage: React.FC = () => {
                       variant='outline'
                       onClick={() => setSelectedTribute(tribute)}
                       className='text-sm rounded-xl'>
-                      View Tribute
+                      View
                     </Button>
                   </CardFooter>
                 </Card>
@@ -150,54 +150,7 @@ const TributePage: React.FC = () => {
           </motion.div>
         </div>
 
-        {/* Modal dialog for full preview */}
-        {/* <Dialog
-          open={!!selectedTribute}
-          onOpenChange={(open) => !open && setSelectedTribute(null)}>
-          <AnimatePresence>
-            {selectedTribute && (
-              <DialogContent className='max-w-6xl h-[80vh] rounded-xl p-4 shadow-2xl overflow-hidden'>
-                <motion.div
-                  initial={{ opacity: 0, scale: 0.9 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  exit={{ opacity: 0, scale: 0.9 }}
-                  className='relative h-[90vh]'>
-                  {selectedTribute.type === "text" ? (
-                    <div className='p-2 mb-6 h-full overflow-y-auto scrollbar-hide prose prose-base max-w-none'>
-                      <p className='text-lg font-medium'>
-                        {selectedTribute.title}
-                      </p>
-                      <p className='mt-2 mb-4 italic'>
-                        - {selectedTribute.from}
-                      </p>
-                      {selectedTribute.content.split("\n").map((para, idx) => (
-                        <p key={idx} className='mb-4 '>
-                          {para}
-                        </p>
-                      ))}
-                    </div>
-                  ) : (
-                    <div className='relative w-full h-full overflow-auto scrollbar-hide'>
-                      <motion.div
-                        initial={{ scale: 0.95 }}
-                        animate={{ scale: 1 }}
-                        transition={{ duration: 0.5 }}
-                        className='w-full max-w-[800px] mx-auto'>
-                        <Image
-                          src={selectedTribute.content}
-                          alt={selectedTribute.title}
-                          width={1200}
-                          height={2339}
-                          className='object-contain'
-                        />
-                      </motion.div>
-                    </div>
-                  )}
-                </motion.div>
-              </DialogContent>
-            )}
-          </AnimatePresence>
-        </Dialog> */}
+      
 
         {/* Custom Modal Implementation */}
         <AnimatePresence>

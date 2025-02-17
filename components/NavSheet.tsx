@@ -28,7 +28,7 @@ const NavSheet = ({
       <Sheet open={isOpen} onOpenChange={onOpenChange}>
         <SheetTrigger>
           <Button asChild size='icon' variant='ghost'>
-            <AlignLeftIcon className='text-amber-600 dark:text-amber-400' />
+            <AlignLeftIcon className='text-amber-400' />
           </Button>
         </SheetTrigger>
         <SheetContent>

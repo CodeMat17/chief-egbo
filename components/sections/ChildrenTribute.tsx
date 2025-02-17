@@ -120,13 +120,13 @@ export const ChildrenTribute = () => {
                     />
                   </div>
                 </div>
-                <h3 className='text-center text-xl font-semibold mt-4 mb-2'>
+                <h3 className='text-center text-lg font-semibold mt-4 mb-2'>
                   {tribute.name}
                 </h3>
                 <p className='text-center text-muted-foreground text-sm mb-4'>
                   {tribute.position}
                 </p>
-                <button className='w-full py-2 bg-primary/10 text-primary rounded-lg hover:bg-primary/20 transition-colors'>
+                <button className='w-full py-2 bg-amber-600/20 dark:bg-amber-400/10  rounded-xl text-amber-600  hover:bg-primary/20 transition-colors'>
                   Read Tribute
                 </button>
               </motion.div>

@@ -99,7 +99,7 @@ export const HeroCarousel = () => {
                       src={item.img}
                       alt={item.altText}
                       fill
-                      priority
+                      loading="lazy"
                       quality={100}
                       className='object-cover md:object-contain object-center'
                       sizes='(max-width: 768px) 100vw, (max-width: 1024px) 100vw, 100vw'
@@ -116,7 +116,7 @@ export const HeroCarousel = () => {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.4 }}>
                     <div className='max-w-4xl mx-auto space-y-6'>
-                      <h1 className='text-3xl sm:text-4xl md:text-5xl font-light tracking-wide leading-tight text-white drop-shadow-2xl'>
+                      <h1 className='text-3xl sm:text-4xl md:text-5xl font-medium tracking-wide leading-tight text-white drop-shadow-2xl'>
                         {item.text}
                       </h1>
                       <motion.div
