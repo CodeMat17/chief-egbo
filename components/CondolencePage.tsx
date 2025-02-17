@@ -15,9 +15,7 @@ import { ArrowLeft, ArrowRight, FileText } from "lucide-react";
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 import Subheadings from "./Subheadings";
-import {condolenceData} from '@/data'
-
-
+import { condolenceData } from "@/data";
 
 export interface Tribute {
   id: string;
@@ -27,13 +25,11 @@ export interface Tribute {
   type: "text" | "image";
 }
 
-
-
 const CondolencePage: React.FC = () => {
   const [condolences] = useState<Tribute[]>(condolenceData);
   const [selectedTribute, setSelectedTribute] = useState<Tribute | null>(null);
 
-  // For horizontal scroll tracking
+  // For horizontal scroll tracking.
   const scrollContainerRef = useRef<HTMLDivElement>(null);
   const [atEnd, setAtEnd] = useState(false);
 
@@ -49,7 +45,7 @@ const CondolencePage: React.FC = () => {
     const container = scrollContainerRef.current;
     if (container) {
       container.addEventListener("scroll", handleScroll);
-      // Initial check
+      // Initial check.
       handleScroll();
       return () => container.removeEventListener("scroll", handleScroll);
     }
@@ -62,12 +58,12 @@ const CondolencePage: React.FC = () => {
   };
 
   return (
-    <div id='condolence' className='py-12 px-4 sm:px-6 lg:px-8 scroll-mt-20'>
+    <div className='py-12 px-4 sm:px-6 lg:px-8'>
       <div className='max-w-7xl mx-auto relative'>
         <Subheadings text='Condolence Messages' />
 
         {/* Horizontal scroll container for all screens */}
-        <div className={`relative`}>
+        <div className='relative'>
           <div
             ref={scrollContainerRef}
             className='flex space-x-4 overflow-x-auto scrollbar-hide py-4'>
@@ -91,12 +87,11 @@ const CondolencePage: React.FC = () => {
                   </CardHeader>
                   <CardContent className='flex-1'>
                     {condo.type === "text" ? (
-                      // Truncated preview using Tailwind's line-clamp-5.
-                      <div className='prose prose-sm overflow-hidden line-clamp-5'>
+                      <div className='prose prose-sm overflow-hidden scrollbar-hide line-clamp-5'>
                         {condo.content}
                       </div>
                     ) : (
-                      <div className='relative h-36 bg-gray-100 rounded-lg overflow-hidden'>
+                      <div className='relative h-36 bg-gray-100 rounded-lg overflow-hidden scrollbar-hide'>
                         <Image
                           src={condo.content}
                           alt={condo.title}
@@ -133,7 +128,7 @@ const CondolencePage: React.FC = () => {
           onOpenChange={(open) => !open && setSelectedTribute(null)}>
           <AnimatePresence>
             {selectedTribute && (
-              <DialogContent className='max-w-6xl min-h-screen rounded-xl p-6 shadow-2xl'>
+              <DialogContent className='max-w-6xl h-[90vh] rounded-xl p-6 shadow-2xl overflow-hidden'>
                 <motion.div
                   initial={{ opacity: 0, scale: 0.9 }}
                   animate={{ opacity: 1, scale: 1 }}
@@ -142,7 +137,7 @@ const CondolencePage: React.FC = () => {
                   <p className='text-xl font-medium'>{selectedTribute.title}</p>
                   <p className='mt-2 italic'>- {selectedTribute.from}</p>
                   {selectedTribute.type === "text" ? (
-                    <div className='p-6 h-full overflow-y-auto prose prose-base max-w-none'>
+                    <div className='p-6 mb-6 h-full overflow-y-auto scrollbar-hide prose prose-base max-w-none'>
                       {selectedTribute.content.split("\n").map((para, idx) => (
                         <p key={idx} className='mb-4'>
                           {para}
@@ -150,18 +145,19 @@ const CondolencePage: React.FC = () => {
                       ))}
                     </div>
                   ) : (
+                    // For image tributes (such as letters), display the image responsively.
                     <div className='relative w-full h-full overflow-auto scrollbar-hide'>
                       <motion.div
                         initial={{ scale: 0.95 }}
                         animate={{ scale: 1 }}
                         transition={{ duration: 0.5 }}
-                        className='w-full max-w-[800px] mx-auto'>
+                        className='w-full mx-auto max-w-[800px]'>
                         <Image
                           src={selectedTribute.content}
                           alt={selectedTribute.title}
-                          width={1653}
+                          width={1200}
                           height={2339}
-                          className='object-contain'
+                          className=' object-contain'
                         />
                       </motion.div>
                     </div>

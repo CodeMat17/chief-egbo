@@ -61,7 +61,9 @@ const TributePage: React.FC = () => {
   };
 
   return (
-    <div id='other-tributes' className='py-12 px-4 sm:px-6 lg:px-8 scroll-mt-20'>
+    <div
+      id='other-tributes'
+      className='py-12 px-4 sm:px-6 lg:px-8 scroll-mt-20'>
       <div className='max-w-7xl mx-auto relative'>
         <Subheadings text='Other Tributes' />
 
@@ -133,12 +135,12 @@ const TributePage: React.FC = () => {
           onOpenChange={(open) => !open && setSelectedTribute(null)}>
           <AnimatePresence>
             {selectedTribute && (
-              <DialogContent className='max-w-6xl min-h-screen rounded-xl p-6 shadow-2xl'>
+              <DialogContent className='max-w-6xl h-[90vh] rounded-xl p-6 shadow-2xl overflow-hidden'>
                 <motion.div
                   initial={{ opacity: 0, scale: 0.9 }}
                   animate={{ opacity: 1, scale: 1 }}
                   exit={{ opacity: 0, scale: 0.9 }}
-                  className='relative h-[80vh]'>
+                  className='relative h-[80vh] '>
                   <p className='text-xl font-medium'>{selectedTribute.title}</p>
                   <p className='mt-2 italic'>- {selectedTribute.from}</p>
                   {selectedTribute.type === "text" ? (
@@ -159,7 +161,7 @@ const TributePage: React.FC = () => {
                         <Image
                           src={selectedTribute.content}
                           alt={selectedTribute.title}
-                          width={1653}
+                          width={1200}
                           height={2339}
                           className='object-contain'
                         />
