@@ -76,7 +76,7 @@ export const HeroCarousel = () => {
     <section
       id='home'
       {...handlers}
-      className='relative h-[85vh] md:h-[90vh] w-full overflow-hidden bg-white scroll-mt-20'
+      className='relative h-[75vh] md:h-[90vh] w-full overflow-hidden bg-white scroll-mt-20'
       aria-label='Hero Carousel'>
       <AnimatePresence initial={false} mode='wait'>
         {items.map(
