@@ -55,7 +55,7 @@ export const tributeData: DataStructure[] = [
     id: "5",
     title: "Tribute to Ozuome 1",
     from: "Dennis Chukwu",
-    content: "My namesake your death was a very big shock to me. It makes me to go memory lane, when I was still a kid living with my Grandma Ogboo. You are my father and my uncle, I can not write my childhood history without your name been mentioned. You are the father that were there for me all my childhood years, I remember how you will carry me on your bicycle to the farm of Ngene Igwe and Ekpuru ofia. You thought me how to identify different species of yam and how to plant them, you equally showed me how to handle hoes and cutlasses. You always told me the history of your humble beginnings, you thought me to be hard working and also be upright no matter the situation, that good name is better than riches.\n\n Good night Ozuome!!!.\n Good night my namesake!!!.",
+    content: "My namesake your death was a very big shock to me. It makes me to go memory lane, when I was still a kid living with my Grandma Ogboo. You are my father and my uncle, I can not write my childhood history without your name been mentioned. You are the father that were there for me all my childhood years, I remember how you will carry me on your bicycle to the farm of Ngene Igwe and Ekpuru ofia. You taught me how to identify different species of yam and how to plant them, you equally showed me how to handle hoes and cutlasses. You always told me the history of your humble beginnings, you taught me to be hard working and also be upright no matter the situation, that good name is better than riches.\n\n Good night Ozuome!!!.\n Good night my namesake!!!.",
     type: "text",
   },
   {
