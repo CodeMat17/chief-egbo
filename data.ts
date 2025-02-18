@@ -53,13 +53,20 @@ export const tributeData: DataStructure[] = [
   },
   {
     id: "5",
+    title: "Tribute to Ozuome 1",
+    from: "Dennis Chukwu",
+    content: "My namesake your death was a very big shock to me. It makes me to go memory lane, when I was still a kid living with my Grandma Ogboo. You are my father and my uncle, I can not write my childhood history without your name been mentioned. You are the father that were there for me all my childhood years, I remember how you will carry me on your bicycle to the farm of Ngene Igwe and Ekpuru ofia. You thought me how to identify different species of yam and how to plant them, you equally showed me how to handle hoes and cutlasses. You always told me the history of your humble beginnings, you thought me to be hard working and also be upright no matter the situation, that good name is better than riches.\n\n Good night Ozuome!!!.\n Good night my namesake!!!.",
+    type: "text",
+  },
+  {
+    id: "6",
     title: "Tribute to Chief Dennis Okeke Anih, (Ozuo-omee 1 na Nomeh Unateze)",
     from: "Ozo Dr. (Sir) Chigbo Chukwu",
     content: "/tributes/chigbo.webp",
     type: "image",
   },
   {
-    id: "6",
+    id: "7",
     title: "TRIBUTE TO EZIGBO OGO",
     from: "SIR & LADY I.C.IBE",
     content:
@@ -69,11 +76,12 @@ export const tributeData: DataStructure[] = [
       "SIR & LADY I.C.IBE",
     type: "text",
   },
-   {
-    id: "7",
+  {
+    id: "8",
     title: "TRIBUTE TO MY DAD AND FATHER IN-LAW",
     from: "Mike Okafor (In-law)",
-    content: "A special Dad is hard to find, talk more of a special father in-law. \n\n I wish you could have stayed forever but death they say is inevitable.\n\n You will always remain in my heart. You have left a space what no one will ever replace, not forgetting our talks and your kind advice.\n\n With tears I wave you goodbye.\n\n Adieu my great daddy\n Adieu Nwokeoma\n Adieu man with a beautiful heart",
+    content:
+      "A special Dad is hard to find, talk more of a special father in-law. \n\n I wish you could have stayed forever but death they say is inevitable.\n\n You will always remain in my heart. You have left a space what no one will ever replace, not forgetting our talks and your kind advice.\n\n With tears I wave you goodbye.\n\n Adieu my great daddy\n Adieu Nwokeoma\n Adieu man with a beautiful heart",
     type: "text",
   },
 ];
