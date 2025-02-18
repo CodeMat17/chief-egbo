@@ -36,9 +36,9 @@ const AppreciationPage: React.FC = () => {
     <div id='appreciation' className=' scroll-mt-20'>
       {/* Hero Section */}
       <header
-        className='relative h-96 bg-cover bg-center'
-        style={{ backgroundImage: "url('/bg_2.webp')" }}>
-        <div className='absolute inset-0 bg-black opacity-60'></div>
+        className='relative bg-cover bg-center py-12'
+        style={{ backgroundImage: "url('/carousel/img_5.webp')" }}>
+        <div className='absolute inset-0 bg-black/80'></div>
         <div className='relative z-10 flex flex-col items-center justify-center h-full px-4 text-center text-white'>
           <motion.h1
             initial={{ opacity: 0, y: -20 }}
@@ -47,49 +47,38 @@ const AppreciationPage: React.FC = () => {
             className={`text-3xl sm:text-4xl text-amber-400 font-bold mb-4 ${cinzel.className}`}>
             Appreciation
           </motion.h1>
+        </div>
+        <main className='max-w-3xl mx-auto py-8 px-4 sm:px-6 lg:px-8 '>
+          {" "}
           <motion.p
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1, delay: 0.5 }}
-            className='text-xl max-w-2xl'>
-            We appreciate everyone who traveled far to join us and those who helped
-            make this event a beautiful celebration of life.
+            className='drop-shadow-2xl text-white'>
+            During moments of profound loss, the presence of friends and family
+            brings a comforting sense of solace and support. We extend our
+            deepest gratitude to each and everyone of you for making out time
+            for our family not minding the period we are in economically,
+            security and many other things. <br />
+            <br />
+            We appreciate your supports, your advices and especially your
+            prayers at this painful time in our family. The shared tears and
+            heartfelt condolences have shown us that we are not alone in our
+            grief, and for that, we are eternally grateful. <br />
+            <br /> As we continue to mourn and heal, we are comforted by the
+            knowledge that we are supported by such a compassionate and caring
+            community. <br />
+            <br /> May God bless you all, provide you peace and safety as
+            throughout this period and always. <br />
+            <br />
+            Signed <br />
+            <br />
+            <strong>Dr. Chief Onyekaozulu Okolie Jr. ANIH</strong>
           </motion.p>
-          <p className="mt-4 text-gray-300">(ADD MORE TEXT)</p>
-        </div>
+        </main>
       </header>
 
       {/* Appreciation Cards */}
-      {/* <main className='max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8'>
-        <motion.section
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className='mb-12'>
-          <h2 className='text-3xl font-bold mb-6 text-center'>
-            Our Heartfelt Thanks
-          </h2>
-          <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
-            {appreciationMessages.map((item) => (
-              <motion.div
-                key={item.id}
-                whileHover={{ scale: 1.02 }}
-                className='flex flex-col'>
-                <Card className='shadow-lg hover:shadow-xl transition-shadow border-gray-400 dark:border-gray-700'>
-                  <CardHeader>
-                    <CardTitle className='text-2xl font-bold'>
-                      {item.title}
-                    </CardTitle>
-                  </CardHeader>
-                  <CardContent className='p-4'>
-                    <p className='mb-4'>{item.message}</p>
-                  </CardContent>
-                </Card>
-              </motion.div>
-            ))}
-          </div>
-        </motion.section>
-      </main> */}
     </div>
   );
 };

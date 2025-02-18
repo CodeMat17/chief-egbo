@@ -142,7 +142,7 @@ export const HeroCarousel = () => {
           className='p-3 rounded-full bg-amber-500/50 hover:bg-amber-500/20 backdrop-blur-sm  transition-all duration-300 hover:scale-110'
           aria-label='Previous slide'>
           <svg
-            className='w-6 h-6 '
+            className='w-6 h-6 text-white'
             fill='none'
             stroke='currentColor'
             viewBox='0 0 24 24'>
@@ -162,7 +162,7 @@ export const HeroCarousel = () => {
               className={`w-2.5 h-2.5 rounded-full transition-all duration-300 ${
                 index === activeIndex
                   ? "bg-amber-500 scale-125"
-                  : "bg-white/50 hover:bg-white/70"
+                  : "bg-white/70 border border-amber-500 hover:bg-white/70"
               }`}
               onClick={() => setActiveIndex(index)}
               aria-label={`Go to slide ${index + 1}`}
@@ -175,7 +175,7 @@ export const HeroCarousel = () => {
           className='p-3 rounded-full bg-amber-500/50 hover:bg-amber-500/20 backdrop-blur-sm transition-all duration-300 hover:scale-110'
           aria-label='Next slide'>
           <svg
-            className='w-6 h-6'
+            className='w-6 h-6 text-white'
             fill='none'
             stroke='currentColor'
             viewBox='0 0 24 24'>

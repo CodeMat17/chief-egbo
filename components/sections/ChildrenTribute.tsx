@@ -21,6 +21,13 @@ interface Tribute {
 const childrenTributes: Tribute[] = [
   {
     id: 1,
+    name: ".... Anih",
+    position: "Wife.",
+    image: "/user.avif",
+    tribute: "Tribute to My Late Husband\n\n Our coming together was ordained by God and our journey through the earthly space is one with so much together. From the first moments in Nomeh Station where we met to the toils, struggles and success we saw in over fifty three years together.\n\n My heart brims with an ocean of memories, emotions, and love that I shared with you. Your presence in my life was akin to a guiding star, always illuminating my path and filling my world with warmth and joy. Our journey together was a tapestry woven with threads of laughter, trust, adventures, and boundless love.\n\n In the wake of your passing, I have found strength in the memories we created together and especially for our children. Your love is a constant presence in my life, guiding me through the darkest of days and reminding me of the beauty of our journey together. Although there are moments of profound sadness, there are also moments of deep gratitude for the time we shared and the love we experienced.\n\n May your soul rest peacefully with the Lord Jesus.\n\n May you continue to be there for us even from the heavens.\n\n May your love, sincerity of heart and peace continue to dwell with our children.\n\n Adieu"
+  },
+  {
+    id: 1,
     name: "Chief Dr. Onyekaozulu Okolie Jr. Anih",
     position: "Son.",
     image: "/user.avif",
@@ -34,6 +41,13 @@ const childrenTributes: Tribute[] = [
     image: "/user.avif",
     tribute:
       "TRIBUTE TO A LOVING DADDY, CHIEF EGBO NWAFOGO (OZUOME 1 NOMEH)\n\n As I sit here trying to find the right words to say, my heart inches with the realization that this is my farewell message to you (Daddy). The pain of losing you is immeasurable, and I struggle to comprehend a world without your presence. It's a bittersweet farewell as I must accept that you are no longer here with us. But I am grateful that you were my Dad and grateful for the memories we shared.\n\n Though you are physically no longer here, your spirit will always be present in my life. I will carry your love, your warmth and your precious moments. Your absence will be deeply felt, but I will find solace in knowing that you are now at peace, free from pain and suffering.\n\n Daddies Daddy as i have fondly call you, Mr. Anu farewell my dear beloved daddy. Your departure leaves an emptiness that cannot be filled but I take comfort in knowing that you are in a better place watching over us.\n\n May you find eternal happiness and serenity in the realm beyond.\n\n Adieu Daddies Daddy\n Adieu Egbo Nwafogo\n Adieu Chief Ozuome 1\n Adieu Oke Mmadu",
+  },
+  {
+    id: 3,
+    name: "Nneka Mbah (Nee ANIH)",
+    position: "Daughter.",
+    image: "/user.avif",
+    tribute: "Daddy, I will forever miss your kindness, peaceful nature, hospitality and all the wonderful memories.\n\n I love you dearly and will forever miss you.\n\n At the heart of our family, daddy you stood as the unshakable pillar, the foundation upon which we build our lives. Your strength and resilience have carried us through the storms of life, providing a safe harbor during times of turbulence. You were a loving husband to my mother, a devoted father to my siblings and me.\n\n You did your best and was very hardworking!\n\n I will miss you daddy."
   },
   {
     id: 3,

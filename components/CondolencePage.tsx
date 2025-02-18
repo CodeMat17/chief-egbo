@@ -69,9 +69,7 @@ const CondolencePage: React.FC = () => {
   };
 
   return (
-    <div
-      id='condolence'
-      className='py-12 px-4 sm:px-6 lg:px-8 scroll-mt-20'>
+    <div id='condolence' className='py-12 px-4 sm:px-6 lg:px-8 scroll-mt-20'>
       <div className='max-w-7xl mx-auto relative'>
         <Subheadings text='Condolence Messages' />
 
@@ -106,7 +104,7 @@ const CondolencePage: React.FC = () => {
                     ) : (
                       <div className='relative h-36 bg-gray-100 rounded-lg overflow-hidden scrollbar-hide'>
                         <Image
-                          src={condo.content}
+                          src={condo.content.includes(",") ? condo.content.split(",")[0].trim() : condo.content}
                           alt={condo.title}
                           fill
                           className='object-cover'
@@ -144,51 +142,73 @@ const CondolencePage: React.FC = () => {
               exit={{ opacity: 0 }}
               className='fixed inset-0 z-50 bg-black/50 backdrop-blur-sm'
               onClick={() => setSelectedTribute(null)}>
-              <div className='absolute inset-0 flex items-center justify-center p-4'>
-                <motion.div
-                  initial={{ y: 50, opacity: 0 }}
-                  animate={{ y: 0, opacity: 1 }}
-                  exit={{ y: 50, opacity: 0 }}
-                  transition={{ type: "spring", bounce: 0.2 }}
-                  className='absolute inset-0 flex items-center justify-center p-4'
-                  onClick={(e) => e.stopPropagation()}>
-                  <div className='bg-background rounded-xl shadow-2xl w-full max-w-3xl max-h-[90dvh] flex flex-col'>
-                    {/* Close Button */}
-                    <button
-                      onClick={() => setSelectedTribute(null)}
-                      className='sticky top-0 z-10 ml-auto p-4 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-full m-2 transition-colors'
-                      aria-label='Close'>
-                      <X className='h-6 w-6 text-red-500' />
-                    </button>
+              <motion.div
+                initial={{ y: 50, opacity: 0 }}
+                animate={{ y: 0, opacity: 1 }}
+                exit={{ y: 50, opacity: 0 }}
+                transition={{ type: "spring", bounce: 0.2 }}
+                className='absolute inset-0 flex items-center justify-center p-4'
+                onClick={(e) => e.stopPropagation()}>
+                <div className='bg-background rounded-xl shadow-2xl w-full max-w-3xl max-h-[90dvh] flex flex-col'>
+                  {/* Close Button */}
+                  <button
+                    onClick={() => setSelectedTribute(null)}
+                    className='sticky top-0 z-10 ml-auto p-4 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-full m-2 transition-colors'
+                    aria-label='Close'>
+                    <X className='h-6 w-6 text-red-500' />
+                  </button>
 
-                    {/* Content Area */}
-                    <div className='overflow-y-auto flex-1 pb-6 mx-4 scrollbar-thin scrollbar-track-transparent scrollbar-thumb-amber-500/50 scrollbar-hide'>
-                      {selectedTribute.type === "text" ? (
-                        <div className='prose prose-base max-w-none'>
-                          <h2 className='text-2xl font-semibold mb-2'>
-                            {selectedTribute.title}
-                          </h2>
-                          <p className='text-gray-600 dark:text-gray-400 mb-4 italic'>
-                            From - {selectedTribute.from}
-                          </p>
-                          {selectedTribute.content
-                            .split("\n")
-                            .map((para, idx) => (
-                              <p key={idx} className='mb-4'>
-                                {para}
-                              </p>
-                            ))}
-                        </div>
-                      ) : (
-                        <>
-                          <p className='italic mb-3'>
-                            From - {selectedTribute.from}
-                          </p>
+                  {/* Content Area */}
+                  <div className='overflow-y-auto flex-1 px-4 pb-6 mx-4 scrollbar-thin scrollbar-track-transparent scrollbar-thumb-amber-500/50 scrollbar-hide'>
+                    {selectedTribute.type === "text" ? (
+                      <div className='prose prose-base max-w-none'>
+                        <h2 className='text-2xl font-semibold mb-2'>
+                          {selectedTribute.title}
+                        </h2>
+                        <p className='text-gray-600 dark:text-gray-400 mb-4 italic'>
+                          From - {selectedTribute.from}
+                        </p>
+                        {selectedTribute.content
+                          .split("\n")
+                          .map((para, idx) => (
+                            <p key={idx} className='mb-4'>
+                              {para}
+                            </p>
+                          ))}
+                      </div>
+                    ) : (
+                      // For image tributes, check if multiple pages exist and display them vertically.
+                      <div className='relative w-full h-full overflow-auto scrollbar-hide'>
+                        {selectedTribute.content.includes(",") ? (
+                          <div className='flex flex-col gap-4 p-2'>
+                            {selectedTribute.content
+                              .split(",")
+                              .map((page, idx) => (
+                                <motion.div
+                                  key={idx}
+                                  initial={{ scale: 0.95 }}
+                                  animate={{ scale: 1 }}
+                                  transition={{ duration: 0.5 }}
+                                  className='w-full mx-auto max-w-[800px]'>
+                                  <Image
+                                    src={page.trim()}
+                                    alt={`${selectedTribute.title} - Page ${
+                                      idx + 1
+                                    }`}
+                                    width={1653}
+                                    height={2339}
+                                    className='w-full h-auto object-contain'
+                                    sizes='(max-width: 768px) 100vw, 800px'
+                                  />
+                                </motion.div>
+                              ))}
+                          </div>
+                        ) : (
                           <motion.div
                             initial={{ scale: 0.95 }}
                             animate={{ scale: 1 }}
                             transition={{ duration: 0.5 }}
-                            className='relative w-full overflow-auto scrollbar-hide'>
+                            className='w-full mx-auto max-w-[800px]'>
                             <Image
                               src={selectedTribute.content}
                               alt={selectedTribute.title}
@@ -198,12 +218,12 @@ const CondolencePage: React.FC = () => {
                               sizes='(max-width: 768px) 100vw, 800px'
                             />
                           </motion.div>
-                        </>
-                      )}
-                    </div>
+                        )}
+                      </div>
+                    )}
                   </div>
-                </motion.div>
-              </div>
+                </div>
+              </motion.div>
             </motion.div>
           )}
         </AnimatePresence>

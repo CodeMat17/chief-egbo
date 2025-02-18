@@ -11,10 +11,11 @@ const Footer: React.FC = () => {
         </p>
         <p className='text-amber-400 mt-3 text-sm'>
           This website was developed by{" "}
-          <Link
-            href='https://matthewchukwu.com.ng'
-            className='text-yellow-400 underline'>
-            Matthew. Click to check.
+          <Link href='https://matthewchukwu.com.ng' className='text-amber-400'>
+            Matthew.
+          </Link>{' '}
+          <Link href='https://matthewchukwu.com.ng' className='text-yellow-400'>
+            Click to check.
           </Link>
         </p>
       </div>
