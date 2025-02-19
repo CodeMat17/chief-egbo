@@ -10,13 +10,27 @@ body {
   padding-top: 140.35%;
 }
 
-/* globals.css */
-@layer utilities {
+/* Enable iOS momentum scrolling */
+.pinch-zoom {
+  -webkit-overflow-scrolling: touch;
+  -ms-scroll-chaining: none;
+      overscroll-behavior: contain;
+}
+
+/* Mobile zoom behavior */
+@supports (touch-action: pan-x pan-y) {
   .pinch-zoom {
-    touch-action: pan-y pinch-zoom;
+    touch-action: pan-x pan-y;
   }
-  .touch-pan-y {
-    touch-action: pan-y;
+}
+
+/* Desktop hover states */
+@media (hover: hover) {
+  .pinch-zoom {
+    overflow: hidden;
+  }
+  .pinch-zoom:hover {
+    overflow: auto;
   }
 }
 

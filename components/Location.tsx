@@ -38,17 +38,19 @@ const Location = () => {
         <div className='relative h-0 pt-[140.35%] '>
           <div className='touch-pan-y pinch-zoom absolute inset-0 rounded-xl overflow-hidden'>
             {/* 1280/912 = 1.4035 */}
-            <Image
-              alt='Detailed event directions map for Nomeh Unateze'
-              src='/direction.webp'
-              fill
-              priority
-              quality={90}
-              className='object-contain object-left-top'
-              sizes='(max-width: 890px) 100vw, 890px'
-              placeholder='blur'
-              blurDataURL='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+M9QDwADhgGAWjR9awAAAABJRU5ErkJggg=='
-            />
+            <div className='min-w-full min-h-full relative'>
+              <Image
+                alt='Detailed event directions map for Nomeh Unateze'
+                src='/direction.webp'
+                fill
+                priority
+                quality={90}
+                className='object-contain object-left-top'
+                sizes='(max-width: 890px) 100vw, 890px'
+                placeholder='blur'
+                blurDataURL='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+M9QDwADhgGAWjR9awAAAABJRU5ErkJggg=='
+              />
+            </div>
           </div>
           {/* Google Maps Floating Button */}
           {/* <a
