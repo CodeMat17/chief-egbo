@@ -11,7 +11,7 @@ const links = [
   { tag: "Home", href: "#home" },
   { tag: "Readings", href: "#readings" },
   { tag: "Biography", href: "#biography" },
-  { tag: "Loving Memories", href: "#children-tributes" },
+  { tag: "Family Tribute", href: "#children-tributes" },
   { tag: "Other Tributes", href: "#other-tributes" },
   { tag: "Condolence", href: "#condolence" },
   { tag: "Appreciation", href: "#appreciation" },
