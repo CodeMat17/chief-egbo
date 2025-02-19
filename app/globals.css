@@ -6,6 +6,20 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+.pt-\[140\.35\%\] {
+  padding-top: 140.35%;
+}
+
+/* globals.css */
+@layer utilities {
+  .pinch-zoom {
+    touch-action: pan-y pinch-zoom;
+  }
+  .touch-pan-y {
+    touch-action: pan-y;
+  }
+}
+
 /* Custom scrollbars */
 .scrollbar-thin::-webkit-scrollbar {
   width: 6px;

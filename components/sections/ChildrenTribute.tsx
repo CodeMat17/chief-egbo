@@ -143,10 +143,10 @@ export const ChildrenTribute = () => {
 
   return (
     <section
-      id='children-tributes'
+      id='family-tributes'
       className='py-12 px-4 md:px-8 bg-background text-foreground scroll-mt-20'>
       <div className='max-w-6xl mx-auto'>
-        <Subheadings text='Loving Memories from the immediate family.' />
+        <Subheadings text='Family Tributes.' />
 
         <div className='relative'>
           {/* Horizontal scroll container for all screens */}
