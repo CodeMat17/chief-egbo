@@ -1,6 +1,10 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
 import Subheadings from "./Subheadings";
+import Zoom from "react-medium-image-zoom";
+import "react-medium-image-zoom/dist/styles.css";
 
 const Location = () => {
   const googleMapsLink =
@@ -33,56 +37,26 @@ const Location = () => {
           </span>
         </Link>
       </div>
-      <div className='mx-auto max-w-[890px] rounded-2xl shadow-xl'>
+      <div className='mx-auto max-w-[890px] rounded-2xl shadow-xl border'>
         {/* Image Container with Aspect Ratio */}
-        <div className='relative h-0 pt-[140.35%] '>
+        <div className='relative h-0 pt-[140.35%]'>
           <div className='touch-pan-y pinch-zoom absolute inset-0 rounded-xl overflow-hidden'>
-            {/* 1280/912 = 1.4035 */}
-            <div className='min-w-full min-h-full relative'>
-              <Image
-                alt='Detailed event directions map for Nomeh Unateze'
-                src='/direction.webp'
-                fill
-                priority
-                quality={90}
-                className='object-contain object-left-top'
-                sizes='(max-width: 890px) 100vw, 890px'
-                placeholder='blur'
-                blurDataURL='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+M9QDwADhgGAWjR9awAAAABJRU5ErkJggg=='
-              />
-            </div>
+            {/* Wrap the Image with Zoom so users can tap to zoom in */}
+            <Zoom>
+              <div className='relative w-full'>
+                <Image
+                  alt='Detailed event directions map for Nomeh Unateze'
+                  src='/direction.webp'
+                  width={912}
+                  height={1280}
+                  className='w-full h-auto object-contain rounded-xl'
+                  sizes='100vw'
+                  placeholder='blur'
+                  blurDataURL='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+M9QDwADhgGAWjR9awAAAABJRU5ErkJggg=='
+                />
+              </div>
+            </Zoom>
           </div>
-          {/* Google Maps Floating Button */}
-          {/* <a
-            href={googleMapsLink}
-            target='_blank'
-            rel='noopener noreferrer'
-            className='absolute top-6 right-6 flex items-center gap-2 rounded-full bg-white px-5 py-3 shadow-lg transition-all hover:scale-105 hover:shadow-xl focus:outline-none focus:ring-4 focus:ring-blue-500/20'>
-            <svg
-              xmlns='http://www.w3.org/2000/svg'
-              className='h-6 w-6 text-red-600'
-              viewBox='0 0 20 20'
-              fill='currentColor'>
-              <path
-                fillRule='evenodd'
-                d='M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z'
-                clipRule='evenodd'
-              />
-            </svg>
-            <span className='text-sm font-semibold text-gray-700'>
-              Open in Google Maps
-            </span>
-          </a> */}
-
-          {/* Direction Legend */}
-          {/* <div className='absolute left-6 top-6 rounded-lg bg-white/95 p-4 shadow-md backdrop-blur-sm'>
-            <h3 className='text-lg font-bold text-gray-800'>Key Directions</h3>
-            <ul className='mt-2 space-y-1 text-sm text-gray-600'>
-              <li>• From Airport: 12km via A3</li>
-              <li>• Parking: North Gate Area</li>
-              <li>• Emergency Access: East Wing</li>
-            </ul>
-          </div> */}
         </div>
       </div>
     </div>
