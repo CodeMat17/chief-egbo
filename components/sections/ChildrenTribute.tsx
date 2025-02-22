@@ -53,7 +53,7 @@ const childrenTributes: Tribute[] = [
   },
   {
     id: 5,
-    name: "Okafor Chiebuka Mike ",
+    name: "Mike Okafor ",
     position: "Grand Son",
     image: "/user.avif",
     tribute:
@@ -77,7 +77,7 @@ const childrenTributes: Tribute[] = [
   },
   {
     id: 8,
-    name: "Chiamaka Okafor (Chidima)",
+    name: "Chiamaka Okafor",
     position: "Grand Daughter",
     image: "/user.avif",
     tribute:
@@ -85,20 +85,12 @@ const childrenTributes: Tribute[] = [
   },
 
   {
-    id: 9,
-    name: "Anih Chimereze",
-    position: "Grand Son",
+    id: 12,
+    name: "Kossiso Okafor",
+    position: "Grand Daughter",
     image: "/user.avif",
     tribute:
-      "TRIBUTE TO MY LOVING GRAND PA \n\n Grand-pa, you are special and No one can replace you. You always had time for me, you brought me gifts, even if I didn’t tell you to. You always wanted to surprise me. I met you almost every morning to talk to you, on the last day I didn’t know it will be the last time I will see you; I thought you and I were going to have more time before you died.\n\n I wanted to have more time with you but I didn’t know it will be the last time. I will never see you again.\n\n I always thought there was going to be more time, before you passed away and went to heaven, because of my rigorous prayers, I didn’t know you were going to die so soon. I was planning to do a lot with you but before I knew it, the news came that you had passed on. Just five (5) years ago, you were strong and healthy, but last year I found out you were weak, you didn’t tell me about your condition and I didn’t even know what was happening until it was too late. Few years you were strong and able, but now may your soul rest in peace. I will always remember YOU Grand pa. \n\n Your Loving Grand Son – Anih Chimereze.",
-  },
-  {
-    id: 10,
-    name: "Anih Chibuzor",
-    position: "GRAND SON",
-    image: "/user.avif",
-    tribute:
-      "A TRIBUTE TO MY LOVING GRAND FATHER.\n\n My grandfather was a unique man who loved me & my siblings dearly he always tried to show us love the best way he could, he bought bicycles for us and told my father to make sure we learn it, that it will be very crucial in our day to day lives.\n\n He was calm & ensured that things were done the right way, the same character my father inherited also my little brother. \n\n My grandpa advised me and told me what to do. He is part of what made me what I am today. He made sure that any time he was happy, we were happy. He had a close relationship with every part of our family on his side and stretched out to those he could reach.  He had a special name for all of us, it was unique and great. My special memory with Grandpa, was when I killed a goat and a chicken signifying chief that I was a man. This impacted me, he told me that I should strive in what I do, become the best and make it work. This and many more I would miss about my late grand father. \n\n  By Your loving grandson, Anih Chibuzo.",
+      "TRIBUTE TO MY GRAND FATHER\n\n Grand father losing you was a sorrowful one and a great loss for the entire family.\n\n I will miss you grandpa.\n\n We will meet again in heaven.",
   },
   {
     id: 11,
@@ -109,12 +101,28 @@ const childrenTributes: Tribute[] = [
       "TRIBUTE TO MY GRAND FATHER.\n\n My Grand Father Mr. Dennis Anih was a good man. A great man in his own way. I may not have seen him in his younger years. I am glad I met him in his later years due to our annual visits to the village.\n\n I remember those days he would ride his bicycle to the farm and wear his farmer’s hat and bag, a few years before he gradually became weak.\n\n He loved sharing his food and eating with his grandkids. I even remember sharing a plate of sumptuous water yam and Okro soup with him.\n\n My morning visits to his room, his wrinkling smile, tender skin, stout nature and funny walk, will forever remain bared in my heart. \n\n My Grand Father had a special name for me- Ada-Jie. No one will call me this name anymore.  Not sad, but happy memories to dwell on, as we go on with our various lives. I will sincerely miss my lovely Grand Father.\n\n Yours Truly,\n\n Anih Nnenna ",
   },
   {
-    id: 12,
-    name: "Kossiso Okafor",
-    position: "Grand Daughter",
+    id: 10,
+    name: "Anih Chibuzor",
+    position: "GRAND SON",
     image: "/user.avif",
     tribute:
-      "TRIBUTE TO MY GRAND FATHER\n\n Grand father losing you was a sorrowful one and a great loss for the entire family.\n\n I will miss you grandpa.\n\n We will meet again in heaven.",
+      "A TRIBUTE TO MY LOVING GRAND FATHER.\n\n My grandfather was a unique man who loved me & my siblings dearly he always tried to show us love the best way he could, he bought bicycles for us and told my father to make sure we learn it, that it will be very crucial in our day to day lives.\n\n He was calm & ensured that things were done the right way, the same character my father inherited also my little brother. \n\n My grandpa advised me and told me what to do. He is part of what made me what I am today. He made sure that any time he was happy, we were happy. He had a close relationship with every part of our family on his side and stretched out to those he could reach.  He had a special name for all of us, it was unique and great. My special memory with Grandpa, was when I killed a goat and a chicken signifying chief that I was a man. This impacted me, he told me that I should strive in what I do, become the best and make it work. This and many more I would miss about my late grand father. \n\n  By Your loving grandson, Anih Chibuzo.",
+  },
+  {
+    id: 9,
+    name: "Anih Chimereze",
+    position: "Grand Son",
+    image: "/user.avif",
+    tribute:
+      "TRIBUTE TO MY LOVING GRAND PA \n\n Grand-pa, you are special and No one can replace you. You always had time for me, you brought me gifts, even if I didn’t tell you to. You always wanted to surprise me. I met you almost every morning to talk to you, on the last day I didn’t know it will be the last time I will see you; I thought you and I were going to have more time before you died.\n\n I wanted to have more time with you but I didn’t know it will be the last time. I will never see you again.\n\n I always thought there was going to be more time, before you passed away and went to heaven, because of my rigorous prayers, I didn’t know you were going to die so soon. I was planning to do a lot with you but before I knew it, the news came that you had passed on. Just five (5) years ago, you were strong and healthy, but last year I found out you were weak, you didn’t tell me about your condition and I didn’t even know what was happening until it was too late. Few years you were strong and able, but now may your soul rest in peace. I will always remember YOU Grand pa. \n\n Your Loving Grand Son – Anih Chimereze.",
+  },
+  {
+    id: 12,
+    name: "Obianuju, Ebube ,Uche and Elochukwu Mba",
+    position: "Grand children",
+    image: "/user.avif",
+    tribute:
+      "To Our Beloved Grandfather\n\n You may be gone, but your love , wisdom and legacy lives on in my heart . Your guidance, support, encouragement shaped me into the person I am today.\n\n I cherish the memories of your presence . Your kindness, generosity and compassion inspired me to be a better person.\n\n Your Impact on our family is immeasurable. You were a rock Mentor and a friend . We miss you dearly  , but we take comfort in the knowledge that your spirit continues to watch over us. \n\n Rest in peace, dear Grandpa. Your love and legacy will never be forgotten.\n\n With  all love and gratitude.",
   },
 ];
 
