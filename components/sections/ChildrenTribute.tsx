@@ -77,6 +77,13 @@ const childrenTributes: Tribute[] = [
   },
   {
     id: 8,
+    name: "Chiebuka Okafor",
+    position: "Grand Son",
+    image: "/user.avif",
+    tribute: "A Tribute to My GrandFather Chief Dennis Okeke Ani (1935-2024)\n\n As I celebrate the life of my beloved grandfather, I'm filled with gratitude for the values he instilled in me and the memories we shared. Though our time together was limited, his wisdom and kindness left a lasting impact on me.\n\n I fondly remember our visits, especially the day he took me to the market and surprised me with a range. Those moments may seem small, but they speak volumes about his character and love.\n\n As a respected community leader and family patriarch, Grandpa your legacy extends far beyond our family. His 89 years on earth were a testament to his strength, resilience, and dedication to those around him.\n\n Rest in peace, dear grandfather. Your love, guidance, and memory will continue to inspire me and our family.\n\n May your legacy be a blessing to us all.",
+  },
+  {
+    id: 8,
     name: "Chiamaka Okafor",
     position: "Grand Daughter",
     image: "/user.avif",

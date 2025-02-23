@@ -9,7 +9,7 @@ import { Button } from "./ui/button";
 
 const links = [
   { tag: "Home", href: "#home" },
-  { tag: "Readings", href: "#readings" },
+  { tag: "Mass", href: "#mass" },
   { tag: "Biography", href: "#biography" },
   { tag: "Family Tributes", href: "#family-tributes" },
   { tag: "Other Tributes", href: "#other-tributes" },

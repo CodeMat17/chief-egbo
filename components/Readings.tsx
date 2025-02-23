@@ -12,7 +12,7 @@ const cinzel = Cinzel_Decorative({ subsets: ["latin"], weight: "700" });
 const Readings = () => {
   return (
     <div
-      id='readings'
+      id='mass'
       className='min-h-screen bg-gray-50 dark:bg-[#020817] scroll-mt-20'>
       {/* Hero Section */}
       <header

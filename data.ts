@@ -55,7 +55,8 @@ export const tributeData: DataStructure[] = [
     id: "5",
     title: "Tribute to Ozuome 1",
     from: "Dennis Chukwu",
-    content: "My namesake your death was a very big shock to me. It makes me to go memory lane, when I was still a kid living with my Grandma Ogboo. You are my father and my uncle, I can not write my childhood history without your name been mentioned. You are the father that were there for me all my childhood years, I remember how you will carry me on your bicycle to the farm of Ngene Igwe and Ekpuru ofia. You taught me how to identify different species of yam and how to plant them, you equally showed me how to handle hoes and cutlasses. You always told me the history of your humble beginnings, you taught me to be hard working and also be upright no matter the situation, that good name is better than riches.\n\n Good night Ozuome!!!.\n Good night my namesake!!!.",
+    content:
+      "My namesake your death was a very big shock to me. It makes me to go memory lane, when I was still a kid living with my Grandma Ogboo. You are my father and my uncle, I can not write my childhood history without your name been mentioned. You are the father that were there for me all my childhood years, I remember how you will carry me on your bicycle to the farm of Ngene Igwe and Ekpuru ofia. You taught me how to identify different species of yam and how to plant them, you equally showed me how to handle hoes and cutlasses. You always told me the history of your humble beginnings, you taught me to be hard working and also be upright no matter the situation, that good name is better than riches.\n\n Good night Ozuome!!!.\n Good night my namesake!!!.",
     type: "text",
   },
   {
@@ -167,6 +168,14 @@ export const condolenceData: DataStructure[] = [
   {
     id: "12",
     title: "Condolence Message",
+    from: "Chukwu Matthew, Software Engr.",
+    content:
+      "Dear Chief Onyekaozulu,\n\n I was saddened when you announced the passing of your father. His loss is felt not only by his family but also by our community, where his wisdom and integrity served as a guiding light for many. Please accept my sincere condolences during this challenging time.\n\n Your father was a man of honor, and his legacy is deeply embedded in the heart of Nomeh Unateze. Known as an encyclopedia of historical knowledge and was a source of guidance for those seeking understanding and insight. The people of Nomeh Unateze will always remember him as the trusted advisor they turned to for cultural pride and historical context.\n\n Throughout his life, he showed a steadfast commitment to the principles of honesty, dignity, and service. His dedication to preserving our heritage and sharing his wealth of knowledge inspired countless individuals. His presence enriched our community, and the legacy of honor and wisdom he leaves behind will continue to illuminate the way for future generations.\n\n May you find comfort in the treasured memories of your father and draw strength from the significant impact he had on so many lives. Please know that my thoughts and prayers are with you and your family as you celebrate his extraordinary legacy.\n\n With deepest sympathy,\n\n Chukwu Matthew",
+    type: "text",
+  },
+  {
+    id: "13",
+    title: "Condolence Message",
     from: "Chukwuemeka Onyesoh, OBA AGBALANZE na NRI.",
     content:
       "Ozo Akobundu Ndigbo.\n\n\n" +
@@ -180,14 +189,14 @@ export const condolenceData: DataStructure[] = [
     type: "text",
   },
   {
-    id: "13",
+    id: "14",
     title: "Condolences",
     from: "Stanbic IBTC",
     content: "/condo/condo_8.jpg",
     type: "image",
   },
   {
-    id: "14",
+    id: "15",
     title: "Condolence Message",
     from: "Senior Staff Asso. of Nigerian Universities",
     content: "/condo/condo_9.webp",
