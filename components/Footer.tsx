@@ -15,7 +15,7 @@ const Footer: React.FC = () => {
             Matthew.
           </Link>{' '}
           <Link href='https://matthewchukwu.com.ng' className='text-yellow-400'>
-            Click to check.
+            Click to contact.
           </Link>
         </p>
       </div>
