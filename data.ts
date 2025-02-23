@@ -190,13 +190,20 @@ export const condolenceData: DataStructure[] = [
   },
   {
     id: "14",
+    title: "Condolence Message",
+    from: "Chief Uche Nwanyim Nwaosimiri-Ike Nomeh, Base in Sweden",
+    content: "Chief Sir Onyekaozulu, \n\n Your father was a true statesman, a bridge-builder, and a passionate advocate for the unity and progress of Nomeh Unateze. His contributions to the development of our community as a whole are immeasurable.\n\n My family and I extend our heartfelt condolences to you in this difficult time,and all those who were touched by his remarkable life. \n\n He will be sorely missed. My prayers and thoughts are with your family in this tough time.",
+    type: "text",
+  },
+  {
+    id: "15",
     title: "Condolences",
     from: "Stanbic IBTC",
     content: "/condo/condo_8.jpg",
     type: "image",
   },
   {
-    id: "15",
+    id: "16",
     title: "Condolence Message",
     from: "Senior Staff Asso. of Nigerian Universities",
     content: "/condo/condo_9.webp",
