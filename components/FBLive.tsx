@@ -22,6 +22,13 @@ export default function FBLive() {
         <FacebookIcon size={32} />
       </Link>
 
+      <a
+        href='https://facebook.com/events/s/burial-of-chief-dennis-okeke-e/959065976294151/'
+        target='_blank'
+        className='relative flex items-center justify-center text-white bg-blue-600 rounded-full w-14 h-14 shadow-lg hover:bg-blue-700 transition-all duration-300'>
+        <FacebookIcon size={32} />
+      </a>
+
       {/* "Live" Text Badge */}
       <span className='absolute justify-center text-center -top-3 -right-3 bg-red-500 text-white text-xs font-bold px-2 py-1 rounded animate-pulse '>
         LIVE
