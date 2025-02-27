@@ -86,7 +86,7 @@ const CondolencePage: React.FC = () => {
                 animate='visible'
                 whileHover={{ scale: 1.02 }}
                 className='flex-shrink-0 w-11/12 max-w-xs'>
-                <Card className='flex flex-col h-full shadow-lg hover:shadow-xl transition-shadow border-gray-300 dark:border-gray-800'>
+                <Card className='flex flex-col h-full shadow-lg hover:shadow-xl transition-shadow border-gray-300 bg-gray-50 dark:border-none dark:bg-gray-900'>
                   <CardHeader>
                     <CardTitle className='flex items-center gap-2'>
                       <FileText className='text-gray-600 shrink-0' />

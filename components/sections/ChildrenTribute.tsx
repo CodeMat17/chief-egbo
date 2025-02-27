@@ -171,7 +171,7 @@ export const ChildrenTribute = () => {
             {childrenTributes.map((tribute) => (
               <motion.div
                 key={tribute.id}
-                className='snap-center flex-shrink-0 w-[300px] bg-card rounded-xl shadow-lg p-6 border border-gray-300 dark:border-gray-800 transition-transform hover:scale-105 cursor-pointer'
+                className='snap-center flex-shrink-0 w-[300px] bg-card bg-gray-50 rounded-xl shadow-lg p-6 border border-gray-300 dark:border-none dark:bg-gray-900 transition-transform hover:scale-105 cursor-pointer'
                 onClick={() => setSelectedTribute(tribute)}>
                 <div className='flex justify-center items-center'>
                   <div className='relative w-32 aspect-square'>
