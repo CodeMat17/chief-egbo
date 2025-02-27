@@ -167,11 +167,11 @@ export const ChildrenTribute = () => {
           {/* Horizontal scroll container for all screens */}
           <div
             ref={scrollRef}
-            className='flex  overflow-x-auto pb-8 snap-x snap-mandatory scrollbar-hide'>
+            className='flex overflow-x-auto pb-8 gap-4 snap-x snap-mandatory scrollbar-hide'>
             {childrenTributes.map((tribute) => (
               <motion.div
                 key={tribute.id}
-                className='snap-center flex-shrink-0 w-[300px] mx-4 bg-card rounded-xl shadow-lg p-6 border border-gray-300 dark:border-gray-800 transition-transform hover:scale-105 cursor-pointer'
+                className='snap-center flex-shrink-0 w-[300px] bg-card rounded-xl shadow-lg p-6 border border-gray-300 dark:border-gray-800 transition-transform hover:scale-105 cursor-pointer'
                 onClick={() => setSelectedTribute(tribute)}>
                 <div className='flex justify-center items-center'>
                   <div className='relative w-32 aspect-square'>
