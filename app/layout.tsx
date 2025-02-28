@@ -39,7 +39,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "In Loving Memory of Chief Dennis – A Memorial Tribute",
     description:
-      "A heartfelt memorial website honoring the life and legacy of Chief Dennis. Explore biographies, tributes, condolence messages, and more as we celebrate a remarkable life.",
+      "Honoring the life and legacy of Chief Dennis. Explore biographies, tributes, condolence messages, and more as we celebrate a remarkable life.",
     images: [
       "https://res.cloudinary.com/mctony17/image/upload/v1739536079/logos/seo_logo.webp",
     ],
