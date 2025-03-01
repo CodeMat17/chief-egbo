@@ -1,7 +1,7 @@
 import AppreciationPage from "@/components/AppreciationPage";
 import BiographyPage from "@/components/BiographyPage";
 import CondolencePage from "@/components/CondolencePage";
-import FBLive from "@/components/FBLive";
+// import FBLive from "@/components/FBLive";
 import Footer from "@/components/Footer";
 import Location from "@/components/Location";
 import Readings from "@/components/Readings";
@@ -21,7 +21,7 @@ export default function Home() {
       <Location />
       <AppreciationPage />
       <Footer />
-      <FBLive />
+      {/* <FBLive /> */}
     </div>
   );
 }
